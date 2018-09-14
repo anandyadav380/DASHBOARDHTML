@@ -69,6 +69,12 @@
 .feedback_completion .chart_block {height: 388px;}
 select{background: transparent url(dashboard/arrow-down-b.png) no-repeat scroll right 5px / 23px auto!important;}
 header .user_dropdown li ul.dropdown-menu li.img_name {background: url(dashboard/user_bg.jpg) center center no-repeat;}
+.back_button a{margin-top: 20px;display: block;min-width: 65px;}
+.dashboard_box .white_block .box .number span.red{border:1px solid #000;content: "";background: #ae1217;height: 10px;width: 10px;position: absolute;border-radius: 10px;right: 10px;bottom: 20px;}
+.dashboard_box .white_block .box .number span.black{border:1px solid #000;content: "";background: #000000;height: 10px;width: 10px;position: absolute;border-radius: 10px;right: 10px;bottom: 20px;}
+.dashboard_box .white_block .box .number span.white{border:1px solid #000;content: "";background: #ffffff;height: 10px;width: 10px;position: absolute;border-radius: 10px;right: 10px;bottom: 20px;}
+.dashboard_box .white_block .box{position:relative;}
+#sidebar ul li a{text-transform:capitalize;}
 </style>
 
 </head>
@@ -76,10 +82,8 @@ header .user_dropdown li ul.dropdown-menu li.img_name {background: url(dashboard
 <header _ngcontent-c1="">
         <div _ngcontent-c1="" class="container">
           <div _ngcontent-c1="" class="row"> 
-            <div class="pull-right">
-								<a class="next_btn" href="#">Back</a>
-							</div>
-            <div _ngcontent-c1="" class="col-md-2 col-sm-3 col-xs-5">
+           
+            <div _ngcontent-c1="" class="col-md-2 col-sm-2 col-xs-12">
               <div _ngcontent-c1="" class="logo"> <a _ngcontent-c1="" href="#">
                 <!--bindings={
   "ng-reflect-ng-if": "false"
@@ -91,9 +95,13 @@ header .user_dropdown li ul.dropdown-menu li.img_name {background: url(dashboard
                </div>
             </div>
              
+            <div _ngcontent-c1="" class="col-md-9 col-sm-9 col-xs-5 back_button">
+			<div class="pull-right">
+				<a class="next_btn" href="http://demo.learnfeedback.com/" target="_blank">Back</a>
+			</div>
+			</div>
             
-            
-            <div _ngcontent-c1="" class="col-md-10 col-sm-9 col-xs-7">
+            <div _ngcontent-c1="" class="col-md-1 col-sm-1 col-xs-7">
               <!--bindings={
   "ng-reflect-ng-if": "true"
 }--><ul _ngcontent-c1="" class="user_dropdown">
@@ -134,33 +142,11 @@ header .user_dropdown li ul.dropdown-menu li.img_name {background: url(dashboard
 }-->
       <!--bindings={
   "ng-reflect-ng-if": "true"
-}--><li _ngcontent-c2="" class="test active" id="dash" ng-reflect-klass="test" ng-reflect-ng-class="[object Object]"> <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="" data-original-title="Dashboard"><i _ngcontent-c2="" class="fa fa-dashboard fa-fw"></i> <span _ngcontent-c2="">Dashboard</span></a> </li>
+}--><li _ngcontent-c2="" class="test active" id="dash" ng-reflect-klass="test" ng-reflect-ng-class="[object Object]"> <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="" data-original-title="Dashboard"><i _ngcontent-c2="" class="fa fa-dashboard"></i> <span _ngcontent-c2="">Dashboard</span></a> </li>
 
       <!--bindings={
   "ng-reflect-ng-for-of": "[object Object],[object Object"
-}--><li _ngcontent-c2="" id="sel1" class="test managecontent"> 
-        <!--bindings={
-  "ng-reflect-ng-if": "false"
-}-->
-        <span _ngcontent-c2="" class="tooltip_span_menu" data-placement="right" data-toggle="tooltip" title="" data-original-title="Manage content"><!--bindings={
-  "ng-reflect-ng-if": "true"
-}--><a _ngcontent-c2="" aria-expanded="false" class="dropdown-toggle collapsed" data-toggle="collapse" href="#pageSubmenu0" id="toggle1"><i _ngcontent-c2="" class="fa fa-th-list"></i> <span _ngcontent-c2="">Manage content</span></a></span>
-          <!--bindings={
-  "ng-reflect-ng-if": "true"
-}--><ul _ngcontent-c2="" class="collapse list-unstyled" id="pageSubmenu0">
-            <!--bindings={
-  "ng-reflect-ng-for-of": "[object Object],[object Object"
-}--><li _ngcontent-c2="" class="test category">
-              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Feedback Categories"><i _ngcontent-c2="" class="fa fa-comment"></i> <span _ngcontent-c2="">Feedback Categories</span></a>
-            </li><li _ngcontent-c2="" class="test subcategory">
-              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Feedback Sub-Categories"><i _ngcontent-c2="" class="fa fa-comments"></i> <span _ngcontent-c2="">Feedback Sub-Categories</span></a>
-            </li><li _ngcontent-c2="" class="test question">
-              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Feedback Questions"><i _ngcontent-c2="" class="fa fa-commenting"></i> <span _ngcontent-c2="">Feedback Questions</span></a>
-            </li><li _ngcontent-c2="" class="test answer">
-              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Feedback Answers"><i _ngcontent-c2="" class="fa fa-commenting-o"></i> <span _ngcontent-c2="">Feedback Answers</span></a>
-            </li>
-          </ul>
-      </li><li _ngcontent-c2="" id="sel2" class="test managelicense"> 
+}--><li _ngcontent-c2="" id="sel2" class="test managelicense"> 
         <!--bindings={
   "ng-reflect-ng-if": "false"
 }-->
@@ -173,29 +159,9 @@ header .user_dropdown li ul.dropdown-menu li.img_name {background: url(dashboard
             <!--bindings={
   "ng-reflect-ng-for-of": "[object Object],[object Object"
 }--><li _ngcontent-c2="" class="test licensepack">
-              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="License Packs"><i _ngcontent-c2="" class="fa fa-id-card"></i> <span _ngcontent-c2="">License Packs</span></a>
-            </li><li _ngcontent-c2="" class="test discount">
-              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Discounts"><i _ngcontent-c2="" class="fa fa-ticket"></i> <span _ngcontent-c2="">Discounts</span></a>
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Purchase License"><i _ngcontent-c2="" class="fa fa-id-card"></i> <span _ngcontent-c2="">Purchase License</span></a>
             </li><li _ngcontent-c2="" class="test providelicense">
-              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Provide License Pack"><i _ngcontent-c2="" class="fa fa-id-card"></i> <span _ngcontent-c2="">Provide License Pack</span></a>
-            </li>
-          </ul>
-      </li><li _ngcontent-c2="" id="sel3" class="test manageclients"> 
-        <!--bindings={
-  "ng-reflect-ng-if": "false"
-}-->
-        <span _ngcontent-c2="" class="tooltip_span_menu" data-placement="right" data-toggle="tooltip" title="" data-original-title="Manage clients"><!--bindings={
-  "ng-reflect-ng-if": "true"
-}--><a _ngcontent-c2="" aria-expanded="false" class="dropdown-toggle collapsed" data-toggle="collapse" href="#pageSubmenu2" id="toggle3"><i _ngcontent-c2="" class="fa fa-th-list"></i> <span _ngcontent-c2="">Manage clients</span></a></span>
-          <!--bindings={
-  "ng-reflect-ng-if": "true"
-}--><ul _ngcontent-c2="" class="collapse list-unstyled" id="pageSubmenu2">
-            <!--bindings={
-  "ng-reflect-ng-for-of": "[object Object],[object Object"
-}--><li _ngcontent-c2="" class="test inviteclients">
-              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Invite client"><i _ngcontent-c2="" class="fa fa-list-alt"></i> <span _ngcontent-c2="">Invite client</span></a>
-            </li><li _ngcontent-c2="" class="test clientinvitelist">
-              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="View all clients"><i _ngcontent-c2="" class="fa fa-list-alt"></i> <span _ngcontent-c2="">View all clients</span></a>
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="My License Pack"><i _ngcontent-c2="" class="fa fa-id-card"></i> <span _ngcontent-c2="">My License Pack</span></a>
             </li>
           </ul>
       </li><li _ngcontent-c2="" id="sel4" class="test manageusers"> 
@@ -230,62 +196,24 @@ header .user_dropdown li ul.dropdown-menu li.img_name {background: url(dashboard
   "ng-reflect-ng-for-of": "[object Object],[object Object"
 }--><li _ngcontent-c2="" class="test inquiry">
               <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="" data-original-title="Contact us Inquiries"><i _ngcontent-c2="" class="fa fa-comments"></i> <span _ngcontent-c2="">Contact us Inquiries</span></a>
-            </li><li _ngcontent-c2="" class="test purchasereport">
-              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="" data-original-title="Client Purchase Report"><i _ngcontent-c2="" class="fa fa-bar-chart"></i> <span _ngcontent-c2="">Client Purchase Report</span></a>
             </li><li _ngcontent-c2="" class="test userfeedbackscore">
               <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="" data-original-title="User Feedback Report"><i _ngcontent-c2="" class="fa fa-bar-chart"></i> <span _ngcontent-c2="">User Feedback Report</span></a>
             </li>
           </ul>
-      </li><li _ngcontent-c2="" id="sel6" class="test rolepermission"> 
-        <!--bindings={
-  "ng-reflect-ng-if": "true"
-}--><a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="" data-original-title="Roles Permission"><i _ngcontent-c2="" class="fa fa-user-circle"></i> <span _ngcontent-c2="">Roles Permission</span></a>
-        <span _ngcontent-c2="" class="tooltip_span_menu" data-placement="right" data-toggle="tooltip" title="Roles Permission"><!--bindings={
-  "ng-reflect-ng-if": "false"
-}--></span>
-          <!--bindings={
-  "ng-reflect-ng-if": "false"
-}-->
       </li><li _ngcontent-c2="" id="sel7" class="test settings"> 
         <!--bindings={
   "ng-reflect-ng-if": "false"
 }-->
         <span _ngcontent-c2="" class="tooltip_span_menu" data-placement="right" data-toggle="tooltip" title="General Settings"><!--bindings={
   "ng-reflect-ng-if": "true"
-}--><a _ngcontent-c2="" aria-expanded="false" class="dropdown-toggle collapsed" data-toggle="collapse" href="#pageSubmenu6" id="toggle7"><i _ngcontent-c2="" class="fa fa-cogs fa-fw"></i> <span _ngcontent-c2="">General Settings</span></a></span>
+}--><a _ngcontent-c2="" aria-expanded="false" class="dropdown-toggle collapsed" data-toggle="collapse" href="#pageSubmenu6" id="toggle7"><i _ngcontent-c2="" class="fa fa-cogs"></i> <span _ngcontent-c2="">General Settings</span></a></span>
           <!--bindings={
   "ng-reflect-ng-if": "true"
 }--><ul _ngcontent-c2="" class="collapse list-unstyled" id="pageSubmenu6">
             <!--bindings={
   "ng-reflect-ng-for-of": "[object Object],[object Object"
 }--><li _ngcontent-c2="" class="test configuration">
-              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Configurations"><i _ngcontent-c2="" class="fa fa-cogs fa-fw"></i> <span _ngcontent-c2="">Configurations</span></a>
-            </li><li _ngcontent-c2="" class="test country">
-              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Countries"><i _ngcontent-c2="" class="fa fa-globe"></i> <span _ngcontent-c2="">Countries</span></a>
-            </li><li _ngcontent-c2="" class="test state">
-              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="States"><i _ngcontent-c2="" class="fa fa-globe"></i> <span _ngcontent-c2="">States</span></a>
-            </li><li _ngcontent-c2="" class="test discounttype">
-              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Discount Types"><i _ngcontent-c2="" class="fa fa-ticket"></i> <span _ngcontent-c2="">Discount Types</span></a>
-            </li><li _ngcontent-c2="" class="test lpacktype">
-              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="License Pack Types"><i _ngcontent-c2="" class="fa fa-id-card"></i> <span _ngcontent-c2="">License Pack Types</span></a>
-            </li>
-          </ul>
-      </li><li _ngcontent-c2="" id="sel8" class="test email"> 
-        <!--bindings={
-  "ng-reflect-ng-if": "false"
-}-->
-        <span _ngcontent-c2="" class="tooltip_span_menu" data-placement="right" data-toggle="tooltip" title="" data-original-title="Email"><!--bindings={
-  "ng-reflect-ng-if": "true"
-}--><a _ngcontent-c2="" aria-expanded="false" class="dropdown-toggle collapsed" data-toggle="collapse" href="#pageSubmenu7" id="toggle8"><i _ngcontent-c2="" class="fa fa-envelope"></i> <span _ngcontent-c2="">Email</span></a></span>
-          <!--bindings={
-  "ng-reflect-ng-if": "true"
-}--><ul _ngcontent-c2="" class="collapse list-unstyled" id="pageSubmenu7">
-            <!--bindings={
-  "ng-reflect-ng-for-of": "[object Object],[object Object"
-}--><li _ngcontent-c2="" class="test placeholder">
-              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Placeholders"><i _ngcontent-c2="" class="fa fa-window-maximize fa-fw"></i> <span _ngcontent-c2="">Placeholders</span></a>
-            </li><li _ngcontent-c2="" class="test emailtemplate">
-              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Email Templates"><i _ngcontent-c2="" class="fa fa-envelope"></i> <span _ngcontent-c2="">Email Templates</span></a>
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Configurations"><i _ngcontent-c2="" class="fa fa-cogs"></i> <span _ngcontent-c2="">Configurations</span></a>
             </li>
           </ul>
       </li><li _ngcontent-c2="" id="sel9" class="test log"> 
@@ -294,16 +222,16 @@ header .user_dropdown li ul.dropdown-menu li.img_name {background: url(dashboard
 }-->
         <span _ngcontent-c2="" class="tooltip_span_menu" data-placement="right" data-toggle="tooltip" title="" data-original-title="Logs"><!--bindings={
   "ng-reflect-ng-if": "true"
-}--><a _ngcontent-c2="" aria-expanded="false" class="dropdown-toggle collapsed" data-toggle="collapse" href="#pageSubmenu8" id="toggle9"><i _ngcontent-c2="" class="fa fa-key fa-fw"></i> <span _ngcontent-c2="">Logs</span></a></span>
+}--><a _ngcontent-c2="" aria-expanded="false" class="dropdown-toggle collapsed" data-toggle="collapse" href="#pageSubmenu8" id="toggle9"><i _ngcontent-c2="" class="fa fa-key"></i> <span _ngcontent-c2="">Logs</span></a></span>
           <!--bindings={
   "ng-reflect-ng-if": "true"
 }--><ul _ngcontent-c2="" class="collapse list-unstyled" id="pageSubmenu8">
             <!--bindings={
   "ng-reflect-ng-for-of": "[object Object],[object Object"
 }--><li _ngcontent-c2="" class="test loginlog">
-              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Login/Logout Logs"><i _ngcontent-c2="" class="fa fa-key fa-fw"></i> <span _ngcontent-c2="">Login/Logout Logs</span></a>
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Login/Logout Logs"><i _ngcontent-c2="" class="fa fa-key"></i> <span _ngcontent-c2="">Login/Logout Logs</span></a>
             </li><li _ngcontent-c2="" class="test activitylog">
-              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Activity Logs"><i _ngcontent-c2="" class="fa fa-key fa-fw"></i> <span _ngcontent-c2="">Activity Logs</span></a>
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Activity Logs"><i _ngcontent-c2="" class="fa fa-key"></i> <span _ngcontent-c2="">Activity Logs</span></a>
             </li><li _ngcontent-c2="" class="test emaillog">
               <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Email Logs"><i _ngcontent-c2="" class="fa fa-envelope"></i> <span _ngcontent-c2="">Email Logs</span></a>
             </li>
@@ -391,15 +319,15 @@ header .user_dropdown li ul.dropdown-menu li.img_name {background: url(dashboard
 				<div class="white_block">
 					<div class="box"><i class="fa fa-user-plus"></i>
 						<div class="title">Registered<br>User</div>
-						<div class="number">1358</div>
+						<div class="number">1358<span class="red"></span></div>
 					</div>
 					<div class="box"><i class="fa fa-commenting-o"></i>
 						<div class="title">Completed Feedback</div>
-						<div class="number">985</div>
+						<div class="number">985<span class="black"></span></div>
 					</div>
 					<div class="box"><i class="fa fa-calendar"></i>
 						<div class="title">Incomplete Feedback</div>
-						<div class="number">373</div>
+						<div class="number">373<span class="white"></span></div>
 					</div>
 				</div>
 			</div>
@@ -412,15 +340,15 @@ header .user_dropdown li ul.dropdown-menu li.img_name {background: url(dashboard
 				<div class="white_block">
 					<div class="box"><i class="fa fa-key"></i>
 						<div class="title">Total<br>Licenses</div>
-						<div class="number">1680</div>
+						<div class="number">1680<span class="red"></span></div>
 					</div>
 					<div class="box"><i class="fa fa-user-plus"></i>
 						<div class="title">Assigned<br>Licenses</div>
-						<div class="number">1430</div>
+						<div class="number">1430<span class="white"></span></div>
 					</div>
 					<div class="box"><i class="fa fa-calendar-times-o"></i>
 						<div class="title">Remaining<br>Licenses</div>
-						<div class="number">250</div>
+						<div class="number">250<span class="black"></span></div>
 					</div>
 				</div>
 			</div>
@@ -1018,7 +946,7 @@ var chart = AmCharts.makeChart( "feedback_ratio", {
   "valueAxes": [ {
     "gridColor": "#FFFFFF",
     "gridAlpha": 0,
-	"axisAlpha": 0,
+	"axisAlpha": 1,
 	"labelsEnabled": false,
 	"position": "left",
     "title": "Users (in Percentage)"
@@ -1043,7 +971,7 @@ var chart = AmCharts.makeChart( "feedback_ratio", {
   "categoryAxis": {
     "gridPosition": "start",
     "gridAlpha": 0,
-	"axisAlpha": 0,
+	"axisAlpha": 1,
     "tickPosition": "start",
     "tickLength": 20,
 	"labelsEnabled": true,
@@ -1054,6 +982,7 @@ var chart = AmCharts.makeChart( "feedback_ratio", {
 //FEEDBACK RATIO CHART END
 
 // PERFECT SCROLLBAR
+new PerfectScrollbar('.ul_block');
 new PerfectScrollbar('.scroll_notification');
 new PerfectScrollbar('.scroll_notification1');
 new PerfectScrollbar('.scroll_topclient');
