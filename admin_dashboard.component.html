@@ -67,6 +67,8 @@
 select{background: transparent url(dashboard/arrow-down-b.png) no-repeat scroll right 5px / 23px auto!important;}
 .title_block {margin: 8px 0px;}
 header .user_dropdown li ul.dropdown-menu li.img_name {background: url(dashboard/user_bg.jpg) center center no-repeat;}
+.back_button a{margin-top: 20px;display: block;min-width: 65px;}
+#sidebar ul li a{text-transform:capitalize;}
 </style>
 
 </head>
@@ -74,10 +76,8 @@ header .user_dropdown li ul.dropdown-menu li.img_name {background: url(dashboard
 <header _ngcontent-c1="">
         <div _ngcontent-c1="" class="container">
           <div _ngcontent-c1="" class="row"> 
-            <div class="pull-right">
-				<a class="next_btn" href="#">Back</a>
-			</div>
-            <div _ngcontent-c1="" class="col-md-2 col-sm-3 col-xs-5">
+            
+            <div _ngcontent-c1="" class="col-md-2 col-sm-2 col-xs-12">
               <div _ngcontent-c1="" class="logo"> <a _ngcontent-c1=""  href="#">
                 <!--bindings={
   "ng-reflect-ng-if": "false"
@@ -88,10 +88,15 @@ header .user_dropdown li ul.dropdown-menu li.img_name {background: url(dashboard
               </a>
                </div>
             </div>
+			<div _ngcontent-c1="" class="col-md-9 col-sm-9 col-xs-5 back_button">
+			<div class="pull-right">
+				<a class="next_btn" href="http://demo.learnfeedback.com/" target="_blank">Back</a>
+			</div>
+			</div>
              
             
             
-            <div _ngcontent-c1="" class="col-md-10 col-sm-9 col-xs-7">
+            <div _ngcontent-c1="" class="col-md-1 col-sm-1 col-xs-7">
 			
               <!--bindings={
   "ng-reflect-ng-if": "true"
@@ -133,7 +138,7 @@ header .user_dropdown li ul.dropdown-menu li.img_name {background: url(dashboard
 }-->
       <!--bindings={
   "ng-reflect-ng-if": "true"
-}--><li _ngcontent-c2="" class="test active" id="dash" ng-reflect-klass="test" ng-reflect-ng-class="[object Object]"><a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="" data-original-title="Dashboard"><i _ngcontent-c2="" class="fa fa-dashboard fa-fw"></i> <span _ngcontent-c2="">Dashboard</span></a> </li>
+}--><li _ngcontent-c2="" class="test active" id="dash" ng-reflect-klass="test" ng-reflect-ng-class="[object Object]"><a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="" data-original-title="Dashboard"><i _ngcontent-c2="" class="fa fa-dashboard"></i> <span _ngcontent-c2="">Dashboard</span></a> </li>
 
       <!--bindings={
   "ng-reflect-ng-for-of": "[object Object],[object Object"
@@ -251,14 +256,14 @@ header .user_dropdown li ul.dropdown-menu li.img_name {background: url(dashboard
 }-->
         <span _ngcontent-c2="" class="tooltip_span_menu" data-placement="right" data-toggle="tooltip" title="General Settings"><!--bindings={
   "ng-reflect-ng-if": "true"
-}--><a _ngcontent-c2="" aria-expanded="false" class="dropdown-toggle collapsed" data-toggle="collapse" href="#pageSubmenu6" id="toggle7"><i _ngcontent-c2="" class="fa fa-cogs fa-fw"></i> <span _ngcontent-c2="">General Settings</span></a></span>
+}--><a _ngcontent-c2="" aria-expanded="false" class="dropdown-toggle collapsed" data-toggle="collapse" href="#pageSubmenu6" id="toggle7"><i _ngcontent-c2="" class="fa fa-cogs"></i> <span _ngcontent-c2="">General Settings</span></a></span>
           <!--bindings={
   "ng-reflect-ng-if": "true"
 }--><ul _ngcontent-c2="" class="collapse list-unstyled" id="pageSubmenu6">
             <!--bindings={
   "ng-reflect-ng-for-of": "[object Object],[object Object"
 }--><li _ngcontent-c2="" class="test configuration">
-              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Configurations"><i _ngcontent-c2="" class="fa fa-cogs fa-fw"></i> <span _ngcontent-c2="">Configurations</span></a>
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Configurations"><i _ngcontent-c2="" class="fa fa-cogs"></i> <span _ngcontent-c2="">Configurations</span></a>
             </li><li _ngcontent-c2="" class="test country">
               <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Countries"><i _ngcontent-c2="" class="fa fa-globe"></i> <span _ngcontent-c2="">Countries</span></a>
             </li><li _ngcontent-c2="" class="test state">
@@ -282,7 +287,7 @@ header .user_dropdown li ul.dropdown-menu li.img_name {background: url(dashboard
             <!--bindings={
   "ng-reflect-ng-for-of": "[object Object],[object Object"
 }--><li _ngcontent-c2="" class="test placeholder">
-              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Placeholders"><i _ngcontent-c2="" class="fa fa-window-maximize fa-fw"></i> <span _ngcontent-c2="">Placeholders</span></a>
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Placeholders"><i _ngcontent-c2="" class="fa fa-window-maximize"></i> <span _ngcontent-c2="">Placeholders</span></a>
             </li><li _ngcontent-c2="" class="test emailtemplate">
               <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Email Templates"><i _ngcontent-c2="" class="fa fa-envelope"></i> <span _ngcontent-c2="">Email Templates</span></a>
             </li>
@@ -293,16 +298,16 @@ header .user_dropdown li ul.dropdown-menu li.img_name {background: url(dashboard
 }-->
         <span _ngcontent-c2="" class="tooltip_span_menu" data-placement="right" data-toggle="tooltip" title="" data-original-title="Logs"><!--bindings={
   "ng-reflect-ng-if": "true"
-}--><a _ngcontent-c2="" aria-expanded="false" class="dropdown-toggle collapsed" data-toggle="collapse" href="#pageSubmenu8" id="toggle9"><i _ngcontent-c2="" class="fa fa-key fa-fw"></i> <span _ngcontent-c2="">Logs</span></a></span>
+}--><a _ngcontent-c2="" aria-expanded="false" class="dropdown-toggle collapsed" data-toggle="collapse" href="#pageSubmenu8" id="toggle9"><i _ngcontent-c2="" class="fa fa-key"></i> <span _ngcontent-c2="">Logs</span></a></span>
           <!--bindings={
   "ng-reflect-ng-if": "true"
 }--><ul _ngcontent-c2="" class="collapse list-unstyled" id="pageSubmenu8">
             <!--bindings={
   "ng-reflect-ng-for-of": "[object Object],[object Object"
 }--><li _ngcontent-c2="" class="test loginlog">
-              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Login/Logout Logs"><i _ngcontent-c2="" class="fa fa-key fa-fw"></i> <span _ngcontent-c2="">Login/Logout Logs</span></a>
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Login/Logout Logs"><i _ngcontent-c2="" class="fa fa-key"></i> <span _ngcontent-c2="">Login/Logout Logs</span></a>
             </li><li _ngcontent-c2="" class="test activitylog">
-              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Activity Logs"><i _ngcontent-c2="" class="fa fa-key fa-fw"></i> <span _ngcontent-c2="">Activity Logs</span></a>
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Activity Logs"><i _ngcontent-c2="" class="fa fa-key"></i> <span _ngcontent-c2="">Activity Logs</span></a>
             </li><li _ngcontent-c2="" class="test emaillog">
               <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Email Logs"><i _ngcontent-c2="" class="fa fa-envelope"></i> <span _ngcontent-c2="">Email Logs</span></a>
             </li>
@@ -1403,7 +1408,7 @@ var chart = AmCharts.makeChart("licensepack_sell", {
     "color": "#b01116"
   }],
   "valueAxes": [{
-    "axisAlpha": 0,
+    "axisAlpha": 1,
     "position": "left",
 	"gridAlpha": 0,
 	"labelsEnabled": false,
@@ -1426,7 +1431,7 @@ var chart = AmCharts.makeChart("licensepack_sell", {
   },
   "categoryField": "country",
   "categoryAxis": {
-	"axisAlpha": 0,
+	"axisAlpha": 1,
 	"gridPosition": "start",
 	"gridAlpha": 0,
 	"position": "left",
@@ -1463,7 +1468,7 @@ var chart = AmCharts.makeChart("licensepack_sell1", {
     "color": "#b01116"
   }],
   "valueAxes": [{
-    "axisAlpha": 0,
+    "axisAlpha": 1,
     "position": "left",
 	"gridAlpha": 0,
 	"labelsEnabled": false,
@@ -1486,7 +1491,7 @@ var chart = AmCharts.makeChart("licensepack_sell1", {
   },
   "categoryField": "country",
   "categoryAxis": {
-	"axisAlpha": 0,
+	"axisAlpha": 1,
 	"gridPosition": "start",
 	"gridAlpha": 0,
 	"position": "left",
@@ -1523,7 +1528,7 @@ var chart = AmCharts.makeChart("licensepack_sell2", {
     "color": "#b01116"
   }],
   "valueAxes": [{
-    "axisAlpha": 0,
+    "axisAlpha": 1,
     "position": "left",
 	"gridAlpha": 0,
 	"labelsEnabled": false,
@@ -1546,7 +1551,7 @@ var chart = AmCharts.makeChart("licensepack_sell2", {
   },
   "categoryField": "country",
   "categoryAxis": {
-	"axisAlpha": 0,
+	"axisAlpha": 1,
 	"gridPosition": "start",
 	"gridAlpha": 0,
 	"position": "left",
@@ -1583,7 +1588,7 @@ var chart = AmCharts.makeChart("licensepack_sell3", {
     "color": "#b01116"
   }],
   "valueAxes": [{
-    "axisAlpha": 0,
+    "axisAlpha": 1,
     "position": "left",
 	"gridAlpha": 0,
 	"labelsEnabled": false,
@@ -1606,7 +1611,7 @@ var chart = AmCharts.makeChart("licensepack_sell3", {
   },
   "categoryField": "country",
   "categoryAxis": {
-	"axisAlpha": 0,
+	"axisAlpha": 1,
 	"gridPosition": "start",
 	"gridAlpha": 0,
 	"position": "left",
@@ -1728,6 +1733,7 @@ var chart = AmCharts.makeChart( "feedback_ratio", {
 //FEEDBACK RATIO CHART END
 
 // PERFECT SCROLLBAR
+new PerfectScrollbar('.ul_block');
 new PerfectScrollbar('.scroll_notification');
 new PerfectScrollbar('.scroll_notification1');
 new PerfectScrollbar('.scroll_topclient');
