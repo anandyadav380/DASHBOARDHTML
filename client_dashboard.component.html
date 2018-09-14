@@ -391,15 +391,15 @@ header .user_dropdown li ul.dropdown-menu li.img_name {background: url(dashboard
 				<div class="white_block">
 					<div class="box"><i class="fa fa-user-plus"></i>
 						<div class="title">Registered<br>User</div>
-						<div class="number">5</div>
+						<div class="number">1358</div>
 					</div>
 					<div class="box"><i class="fa fa-commenting-o"></i>
 						<div class="title">Completed Feedback</div>
-						<div class="number">3</div>
+						<div class="number">985</div>
 					</div>
 					<div class="box"><i class="fa fa-calendar"></i>
 						<div class="title">Incomplete Feedback</div>
-						<div class="number">2</div>
+						<div class="number">373</div>
 					</div>
 				</div>
 			</div>
@@ -412,15 +412,15 @@ header .user_dropdown li ul.dropdown-menu li.img_name {background: url(dashboard
 				<div class="white_block">
 					<div class="box"><i class="fa fa-key"></i>
 						<div class="title">Total<br>Licenses</div>
-						<div class="number">215</div>
+						<div class="number">1680</div>
 					</div>
 					<div class="box"><i class="fa fa-user-plus"></i>
 						<div class="title">Assigned<br>Licenses</div>
-						<div class="number">7</div>
+						<div class="number">1430</div>
 					</div>
 					<div class="box"><i class="fa fa-calendar-times-o"></i>
 						<div class="title">Remaining<br>Licenses</div>
-						<div class="number">208</div>
+						<div class="number">250</div>
 					</div>
 				</div>
 			</div>
@@ -746,14 +746,12 @@ header .user_dropdown li ul.dropdown-menu li.img_name {background: url(dashboard
 				<div class="white_box">				
 					<div class="feedback_completion">
 						<div class="pull-left">
-							<h4>Feedback Completion Ratio</h4>
+							<h4>Completion Ratio</h4>
 						</div>
 						<div class="pull-right">
 							<select class="">
 								<option value="2018">2018</option>
 								<option value="2017">2017</option>
-								<option value="2016">2016</option>
-								<option value="2015">2015</option>
 							</select>
 						</div>
 						<div class="clearfix"></div>	
@@ -886,15 +884,15 @@ var chart = AmCharts.makeChart("feedback_chart", {
   "innerRadius": "30%",
   "dataProvider": [{
     "country": "Registered User",
-    "litres": 5,
+    "litres": 1358,
 	"color": "#b01116"
   }, {
     "country": "Completed Feedback",
-    "litres": 3,
+    "litres": 985,
 	"color": "#000000"
   }, {
     "country": "Incomplete Feedback",
-    "litres": 2,
+    "litres": 373,
 	"color": "#ffffff"
   }],
   /* "responsive": {
@@ -920,15 +918,15 @@ var chart = AmCharts.makeChart("license_chart", {
   "innerRadius": "30%",
   "dataProvider": [{
     "country": "Total Licenses",
-    "litres": 215,
+    "litres": 1680,
 	"color": "#b01116"
   }, {
     "country": "Assigned Licenses",
-    "litres": 7,
+    "litres": 1430,
 	"color": "#ffffff"
   }, {
     "country": "Remaining Licenses",
-    "litres": 208,
+    "litres": 250,
 	"color": "#000000"
   }],
   /* "responsive": {
@@ -998,23 +996,23 @@ var chart = AmCharts.makeChart( "feedback_ratio", {
   "theme": "none",
   "dataProvider": [ {
     "country": "< 1 Day",
-    "visits": 2025,
+    "visits": 185,
 	"color": "#b01116"
   }, {
     "country": "< 2 Days",
-    "visits": 1882,
+    "visits": 405,
 	"color": "#b01116"
   }, {
     "country": "< 4 Days",
-    "visits": 1809,
+    "visits": 248,
 	"color": "#b01116"
   }, {
     "country": "< Week",
-    "visits": 1322,
+    "visits": 84,
 	"color": "#b01116"
   }, {
-    "country": "Never",
-    "visits": 1122,
+    "country": "> Week",
+    "visits": 63,
 	"color": "#b01116"
   }],
   "valueAxes": [ {
@@ -1023,7 +1021,7 @@ var chart = AmCharts.makeChart( "feedback_ratio", {
 	"axisAlpha": 0,
 	"labelsEnabled": false,
 	"position": "left",
-    "title": "Users"
+    "title": "Users (in Percentage)"
 	
   } ],
   "gridAboveGraphs": true,
@@ -1050,7 +1048,7 @@ var chart = AmCharts.makeChart( "feedback_ratio", {
     "tickLength": 20,
 	"labelsEnabled": true,
 	"position": "bottom",
-    "title": "Feedback Completing Days"
+    "title": "Completion Days"
   }
 } );
 //FEEDBACK RATIO CHART END
