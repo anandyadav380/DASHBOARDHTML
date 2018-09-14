@@ -1,0 +1,1678 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width,initial-scale=1" name="viewport"> 
+<title>Dashboard</title>
+
+<link rel="stylesheet" type="text/css" href="http://learnfeedback.devbyopeneyes.com/assets/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="http://learnfeedback.devbyopeneyes.com/assets/css/buttons.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="http://learnfeedback.devbyopeneyes.com/assets/css/jquery.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="http://learnfeedback.devbyopeneyes.com/assets/css/left_menu.css">
+<link rel="stylesheet" type="text/css" href="http://learnfeedback.devbyopeneyes.com/assets/css/perfect-scrollbar.css">
+<link rel="stylesheet" type="text/css" href="http://learnfeedback.devbyopeneyes.com/assets/css/responsive.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<style>
+.number_box .red_box .white_box{border-bottom: 3px solid #b11016;}
+.number_box .black_box .white_box{border-bottom: 3px solid #000;}
+.number_box .red_box h4,.number_box .black_box h4{font-size: 16px;margin-top:5px;}
+.number_box .red_box .pull-left span,.number_box .black_box .pull-left span{color: #575962;}
+.number_box .red_box .pull-right span,.number_box .black_box .pull-right span{font-size: 22px;color:#000;}
+.scroll_topclient,.scroll_topclient1{height: 346px; overflow:auto; width:100%;<!--  padding-right:10px;  -->display:block; position:relative;}
+.scroll_topclient .ps__thumb-y,.scroll_topclient1 .ps__thumb-y{background:rgba(0,0,0,0.45);}
+.topclient_box .client_section{border-bottom: 1px dashed #e3e3e3;padding-bottom: 20px;margin-bottom: 10px;float:left;width:100%;}
+.no-padding{padding:0;}
+.topclient_box .client_section ul li{list-style: none;display: inline-block;text-align: right;padding-right: 10px;}
+.topclient_box .client_section ul li h4{color:#000;}
+.topclient_box .nav > li > a:focus,.topclient_box .nav > li > a:hover,.topclient_box .nav-pills > li.active > a, .topclient_box .nav-pills > li.active > a:focus, .topclient_box .nav-pills > li.active > a:hover{background: var(--theme-color);border-radius: 4px;color: #fff;border: 0;padding: 10px 15px;line-height: 12px;transition: all .3s ease-in-out;box-shadow: 0 5px 10px 2px rgba(88,103,221,.19);}
+.topclient_box .nav > li > a{line-height:12px;}
+.topclient_box .title_block,.licensepack_box .title_block{border-bottom: 2px solid #f3f3f3;padding-bottom: 10px;}
+.licensepack_box .licensepack_block{padding: 10px;margin-bottom: 5px;border: 1px solid #ddd;position:relative;border-radius:5px;}
+.licensepack_box .licensepack_block ul li{display:inline-block;padding-right:15px;}
+.licensepack_box .licensepack_block h4{color: #000;}
+.licensepack_box .licensepack_block ul li h4{font-size:14px;color: #b01116;}
+.licensepack_box .licensepack_block ul li span{font-size:16px;color:#575962;}
+.licensepack_box .licensepack_block .number span{position: absolute;background: #b01116;color: #fff;right: 15px;bottom: 15px;height: 35px;width: 35px;border-radius: 50px;text-align: center;font-weight: bold;font-size: 18px;line-height: 36px;}
+.licensepack_sell .red_block h1{letter-spacing:1px;text-align: center;font-size: 42px;margin: 35px 0px 35px 0px;}
+.licensepack_sell .red_block h1 span{font-size:30px;}
+.licensepack_sell .earning_button{text-align:center;margin:50px 0px -50px 0px;}
+.licensepack_sell .earning_button span{padding: 10px 20px;background: white;border-color: #ebedf2;border-radius: 60px;color: #575962;border: 1px solid;font-size: 14px;}
+.licensepack_sell .white_block .nav > li > a:focus,.licensepack_sell .white_block .nav > li > a:hover,.licensepack_sell .white_block .nav-pills > li.active > a, .licensepack_sell .white_block .nav-pills > li.active > a:focus, .licensepack_sell .white_block .nav-pills > li.active > a:hover{background: var(--theme-color);border-radius: 4px;color: #fff;border: 0;padding: 10px 15px;line-height: 12px;transition: all .3s ease-in-out;box-shadow: 0 5px 10px 2px rgba(88,103,221,.19);}
+.licensepack_sell .white_block .nav > li > a{line-height:12px;}
+.licensepack_sell .white_block .nav{text-align:center;padding-top:20px;}
+.licensepack_sell .white_block .nav-pills > li{float:none;display:inline-block;}
+.topclient_box .media-left{padding-right:25px;}
+.licensepack_box .licensepack_block #badge-ribbon1 {position: absolute;background: #D6AF36;height: 50px;width: 50px;border-radius: 50px;right: 10px;top: 20px;}
+.licensepack_box .licensepack_block #badge-ribbon1:before,.licensepack_box .licensepack_block #badge-ribbon1:after {content: '';position: absolute;border-bottom: 35px solid #D6AF36;border-left: 10px solid transparent;border-right: 10px solid transparent;top: 37px;left: 0px;-webkit-transform: rotate(-140deg);-moz-transform: rotate(-140deg);-ms-transform: rotate(-140deg);-o-transform: rotate(-140deg);}
+.licensepack_box .licensepack_block #badge-ribbon2 {position: absolute;background: #A7A7AD;height: 50px;width: 50px;border-radius: 50px;right: 10px;top: 20px;}
+.licensepack_box .licensepack_block #badge-ribbon2:before,.licensepack_box .licensepack_block #badge-ribbon2:after {content: '';position: absolute;border-bottom: 35px solid #A7A7AD;border-left: 10px solid transparent;border-right: 10px solid transparent;top: 37px;left: 0px;-webkit-transform: rotate(-140deg);-moz-transform: rotate(-140deg);-ms-transform: rotate(-140deg);-o-transform: rotate(-140deg);}
+.licensepack_box .licensepack_block #badge-ribbon3 {position: absolute;background: #824A02;height: 50px;width: 50px;border-radius: 50px;right: 10px;top: 20px;}
+.licensepack_box .licensepack_block #badge-ribbon3:before,.licensepack_box .licensepack_block #badge-ribbon3:after {content: '';position: absolute;border-bottom: 35px solid #824A02;border-left: 10px solid transparent;border-right: 10px solid transparent;top: 37px;left: 0px;-webkit-transform: rotate(-140deg);-moz-transform: rotate(-140deg);-ms-transform: rotate(-140deg);-o-transform: rotate(-140deg);}
+.licensepack_box .licensepack_block #badge-ribbon1:after,.licensepack_box .licensepack_block #badge-ribbon2:after,.licensepack_box .licensepack_block #badge-ribbon3:after {left: auto;right: 0px;-webkit-transform: rotate(140deg);-moz-transform:    rotate(140deg);-ms-transform:rotate(140deg);-o-transform:rotate(140deg);}
+.licensepack_box .licensepack_block #badge-ribbon1 span,.licensepack_box .licensepack_block #badge-ribbon2 span,.licensepack_box .licensepack_block #badge-ribbon3 span{line-height: 50px;text-align: center;display: block;color: #fff;font-size: 20px;font-weight: bold;vertical-align: middle;}
+.topclient_box .client_section .no-padding ul{float:right}
+.topclient_box .client_section .no-padding ul li:last-child{padding:0;}
+.overall_answer .chart_block,.feedback_completion .chart_block{height:300px;}
+.upload_box .upload_image{width:80px;height:50px;vertical-align:middle;text-align:center;display:table-cell; float:left;}
+.upload_box .upload_image img{max-height:100%;max-width:100%;}
+.upload_box .margin_upload{ margin-bottom:15px;}
+.admin_tbl{height:270px;}
+.check_box input[type="checkbox"]:checked + label {background: url(checkbox_checked.png) left center no-repeat;background-size: 15px;color: var(--theme-color);}
+.check_box label {background: url(checkbox.png) left center no-repeat;font-weight: normal;font-size: 13px;font-family: 'Poppins-Regular';background-size: 15px;padding: 8px 5px 7px 20px;text-align: center;display: inline-block;vertical-align: top;margin: 0;cursor: pointer;color: #444;position: relative;top: 5px;}
+.scroll_notification, .scroll_notification1{height:375px;}
+.notifications .notification_desc{padding-top:12px;}
+@media screen and (-webkit-min-device-pixel-ratio:0) {select{padding-left:5px !important;}}
+select{background: transparent url(dashboard/arrow-down-b.png) no-repeat scroll right 5px / 23px auto!important;}
+.title_block {margin: 8px 0px;}
+header .user_dropdown li ul.dropdown-menu li.img_name {background: url(dashboard/user_bg.jpg) center center no-repeat;}
+</style>
+
+</head>
+<body>
+<header _ngcontent-c1="">
+        <div _ngcontent-c1="" class="container">
+          <div _ngcontent-c1="" class="row"> 
+            <div class="pull-right">
+				<a class="next_btn" href="#">Back</a>
+			</div>
+            <div _ngcontent-c1="" class="col-md-2 col-sm-3 col-xs-5">
+              <div _ngcontent-c1="" class="logo"> <a _ngcontent-c1=""  href="#">
+                <!--bindings={
+  "ng-reflect-ng-if": "false"
+}-->
+                <!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><img _ngcontent-c1="" class="img-responsive" src="http://learnfeedback.devbyopeneyes.com/assets/images/logo.png">
+              </a>
+               </div>
+            </div>
+             
+            
+            
+            <div _ngcontent-c1="" class="col-md-10 col-sm-9 col-xs-7">
+			
+              <!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><ul _ngcontent-c1="" class="user_dropdown">
+                <li _ngcontent-c1="" class=""><a _ngcontent-c1="" aria-expanded="false" class="dropdown-toggle collapsed" data-toggle="dropdown" href="#"><span _ngcontent-c1="" class="letters">TM</span></a>
+                  <ul _ngcontent-c1="" class="dropdown-menu">
+                    <li _ngcontent-c1="" class="img_name">
+						<div _ngcontent-c1="" class="bg_block"></div>
+                      <div _ngcontent-c1="" class="red_bg"><i _ngcontent-c1="" class="fa fa-sort-asc"></i><span _ngcontent-c1="" class="letters pull-left">TM</span>
+                        <div _ngcontent-c1="" class="name_email">Trushant Mehta<br _ngcontent-c1="">
+                          <span _ngcontent-c1="">TMehta@dsgonline.com</span></div>
+                        <div _ngcontent-c1="" class="clearfix"></div>
+                      </div>
+                    </li>
+                    <li _ngcontent-c1=""><a _ngcontent-c1="" routerlink="/editprofile" ng-reflect-router-link="/editprofile" href="#"><i _ngcontent-c1="" class="fa fa-edit"></i>My Profile</a></li>
+                    <li _ngcontent-c1=""><a _ngcontent-c1="" routerlink="/contactus" ng-reflect-router-link="/contactus" href="#"><i _ngcontent-c1="" class="fa fa-support"></i>Contact Us</a></li>
+                    <li _ngcontent-c1="" class="sign_btn"><a _ngcontent-c1="" class="next_btn">Sign Out</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            
+            <div _ngcontent-c1="" class="clearfix"></div>
+          </div>
+        </div>
+      </header>
+      <div class="clearfix"></div>
+<nav _ngcontent-c2="" id="sidebar">
+  <div _ngcontent-c2="" id="container">
+  <div _ngcontent-c2="" class="content">	
+<button _ngcontent-c2="" class="mainscreenhamburger" type="button"><i _ngcontent-c2="" class="fa fa-dedent"></i></button>
+<div _ngcontent-c2="" class="clearfix"></div>
+	   <button _ngcontent-c2="" class="hamburger" type="button"><span _ngcontent-c2=""></span></button>
+	  <div _ngcontent-c2="" class="ul_block ps">
+    	<ul _ngcontent-c2="" class="list-unstyled components">
+
+      <!--bindings={
+  "ng-reflect-ng-if": "false"
+}-->
+      <!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><li _ngcontent-c2="" class="test active" id="dash" ng-reflect-klass="test" ng-reflect-ng-class="[object Object]"> <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="" data-original-title="Dashboard"><i _ngcontent-c2="" class="fa fa-dashboard fa-fw"></i> <span _ngcontent-c2="">Dashboard</span></a> </li>
+
+      <!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--><li _ngcontent-c2="" id="sel1" class="test managecontent"> 
+        <!--bindings={
+  "ng-reflect-ng-if": "false"
+}-->
+        <span _ngcontent-c2="" class="tooltip_span_menu" data-placement="right" data-toggle="tooltip" title="" data-original-title="Manage content"><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><a _ngcontent-c2="" aria-expanded="false" class="dropdown-toggle collapsed" data-toggle="collapse" href="#pageSubmenu0" id="toggle1"><i _ngcontent-c2="" class="fa fa-th-list"></i> <span _ngcontent-c2="">Manage content</span></a></span>
+          <!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><ul _ngcontent-c2="" class="collapse list-unstyled" id="pageSubmenu0">
+            <!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--><li _ngcontent-c2="" class="test category">
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Feedback Categories"><i _ngcontent-c2="" class="fa fa-comment"></i> <span _ngcontent-c2="">Feedback Categories</span></a>
+            </li><li _ngcontent-c2="" class="test subcategory">
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Feedback Sub-Categories"><i _ngcontent-c2="" class="fa fa-comments"></i> <span _ngcontent-c2="">Feedback Sub-Categories</span></a>
+            </li><li _ngcontent-c2="" class="test question">
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Feedback Questions"><i _ngcontent-c2="" class="fa fa-commenting"></i> <span _ngcontent-c2="">Feedback Questions</span></a>
+            </li><li _ngcontent-c2="" class="test answer">
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Feedback Answers"><i _ngcontent-c2="" class="fa fa-commenting-o"></i> <span _ngcontent-c2="">Feedback Answers</span></a>
+            </li>
+          </ul>
+      </li><li _ngcontent-c2="" id="sel2" class="test managelicense"> 
+        <!--bindings={
+  "ng-reflect-ng-if": "false"
+}-->
+        <span _ngcontent-c2="" class="tooltip_span_menu" data-placement="right" data-toggle="tooltip" title="" data-original-title="Manage licenses"><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><a _ngcontent-c2="" aria-expanded="false" class="dropdown-toggle collapsed" data-toggle="collapse" href="#pageSubmenu1" id="toggle2"><i _ngcontent-c2="" class="fa fa-th-list"></i> <span _ngcontent-c2="">Manage licenses</span></a></span>
+          <!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><ul _ngcontent-c2="" class="collapse list-unstyled" id="pageSubmenu1">
+            <!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--><li _ngcontent-c2="" class="test licensepack">
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="License Packs"><i _ngcontent-c2="" class="fa fa-id-card"></i> <span _ngcontent-c2="">License Packs</span></a>
+            </li><li _ngcontent-c2="" class="test discount">
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Discounts"><i _ngcontent-c2="" class="fa fa-ticket"></i> <span _ngcontent-c2="">Discounts</span></a>
+            </li><li _ngcontent-c2="" class="test providelicense">
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Provide License Pack"><i _ngcontent-c2="" class="fa fa-id-card"></i> <span _ngcontent-c2="">Provide License Pack</span></a>
+            </li>
+          </ul>
+      </li><li _ngcontent-c2="" id="sel3" class="test manageclients"> 
+        <!--bindings={
+  "ng-reflect-ng-if": "false"
+}-->
+        <span _ngcontent-c2="" class="tooltip_span_menu" data-placement="right" data-toggle="tooltip" title="" data-original-title="Manage clients"><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><a _ngcontent-c2="" aria-expanded="false" class="dropdown-toggle collapsed" data-toggle="collapse" href="#pageSubmenu2" id="toggle3"><i _ngcontent-c2="" class="fa fa-th-list"></i> <span _ngcontent-c2="">Manage clients</span></a></span>
+          <!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><ul _ngcontent-c2="" class="collapse list-unstyled" id="pageSubmenu2">
+            <!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--><li _ngcontent-c2="" class="test inviteclients">
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Invite client"><i _ngcontent-c2="" class="fa fa-list-alt"></i> <span _ngcontent-c2="">Invite client</span></a>
+            </li><li _ngcontent-c2="" class="test clientinvitelist">
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="View all clients"><i _ngcontent-c2="" class="fa fa-list-alt"></i> <span _ngcontent-c2="">View all clients</span></a>
+            </li>
+          </ul>
+      </li><li _ngcontent-c2="" id="sel4" class="test manageusers"> 
+        <!--bindings={
+  "ng-reflect-ng-if": "false"
+}-->
+        <span _ngcontent-c2="" class="tooltip_span_menu" data-placement="right" data-toggle="tooltip" title="" data-original-title="Manage Users"><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><a _ngcontent-c2="" aria-expanded="false" class="dropdown-toggle collapsed" data-toggle="collapse" href="#pageSubmenu3" id="toggle4"><i _ngcontent-c2="" class="fa fa-users"></i> <span _ngcontent-c2="">Manage Users</span></a></span>
+          <!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><ul _ngcontent-c2="" class="collapse list-unstyled" id="pageSubmenu3">
+            <!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--><li _ngcontent-c2="" class="test userinvite">
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Invite User"><i _ngcontent-c2="" class="fa fa-list-alt"></i> <span _ngcontent-c2="">Invite User</span></a>
+            </li><li _ngcontent-c2="" class="test userinvitelist">
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="View all Users"><i _ngcontent-c2="" class="fa fa-list-alt"></i> <span _ngcontent-c2="">View all Users</span></a>
+            </li>
+          </ul>
+      </li><li _ngcontent-c2="" id="sel5" class="test reports"> 
+        <!--bindings={
+  "ng-reflect-ng-if": "false"
+}-->
+        <span _ngcontent-c2="" class="tooltip_span_menu" data-placement="right" data-toggle="tooltip" title="" data-original-title="Reports"><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><a _ngcontent-c2="" aria-expanded="false" class="dropdown-toggle collapsed" data-toggle="collapse" href="#pageSubmenu4" id="toggle5"><i _ngcontent-c2="" class="fa fa-bar-chart"></i> <span _ngcontent-c2="">Reports</span></a></span>
+          <!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><ul _ngcontent-c2="" class="list-unstyled collapse" id="pageSubmenu4" aria-expanded="true" style="">
+            <!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--><li _ngcontent-c2="" class="test inquiry">
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="" data-original-title="Contact us Inquiries"><i _ngcontent-c2="" class="fa fa-comments"></i> <span _ngcontent-c2="">Contact us Inquiries</span></a>
+            </li><li _ngcontent-c2="" class="test purchasereport">
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="" data-original-title="Client Purchase Report"><i _ngcontent-c2="" class="fa fa-bar-chart"></i> <span _ngcontent-c2="">Client Purchase Report</span></a>
+            </li><li _ngcontent-c2="" class="test userfeedbackscore">
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="" data-original-title="User Feedback Report"><i _ngcontent-c2="" class="fa fa-bar-chart"></i> <span _ngcontent-c2="">User Feedback Report</span></a>
+            </li>
+          </ul>
+      </li><li _ngcontent-c2="" id="sel6" class="test rolepermission"> 
+        <!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="" data-original-title="Roles Permission"><i _ngcontent-c2="" class="fa fa-user-circle"></i> <span _ngcontent-c2="">Roles Permission</span></a>
+        <span _ngcontent-c2="" class="tooltip_span_menu" data-placement="right" data-toggle="tooltip" title="Roles Permission"><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></span>
+          <!--bindings={
+  "ng-reflect-ng-if": "false"
+}-->
+      </li><li _ngcontent-c2="" id="sel7" class="test settings"> 
+        <!--bindings={
+  "ng-reflect-ng-if": "false"
+}-->
+        <span _ngcontent-c2="" class="tooltip_span_menu" data-placement="right" data-toggle="tooltip" title="General Settings"><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><a _ngcontent-c2="" aria-expanded="false" class="dropdown-toggle collapsed" data-toggle="collapse" href="#pageSubmenu6" id="toggle7"><i _ngcontent-c2="" class="fa fa-cogs fa-fw"></i> <span _ngcontent-c2="">General Settings</span></a></span>
+          <!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><ul _ngcontent-c2="" class="collapse list-unstyled" id="pageSubmenu6">
+            <!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--><li _ngcontent-c2="" class="test configuration">
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Configurations"><i _ngcontent-c2="" class="fa fa-cogs fa-fw"></i> <span _ngcontent-c2="">Configurations</span></a>
+            </li><li _ngcontent-c2="" class="test country">
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Countries"><i _ngcontent-c2="" class="fa fa-globe"></i> <span _ngcontent-c2="">Countries</span></a>
+            </li><li _ngcontent-c2="" class="test state">
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="States"><i _ngcontent-c2="" class="fa fa-globe"></i> <span _ngcontent-c2="">States</span></a>
+            </li><li _ngcontent-c2="" class="test discounttype">
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Discount Types"><i _ngcontent-c2="" class="fa fa-ticket"></i> <span _ngcontent-c2="">Discount Types</span></a>
+            </li><li _ngcontent-c2="" class="test lpacktype">
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="License Pack Types"><i _ngcontent-c2="" class="fa fa-id-card"></i> <span _ngcontent-c2="">License Pack Types</span></a>
+            </li>
+          </ul>
+      </li><li _ngcontent-c2="" id="sel8" class="test email"> 
+        <!--bindings={
+  "ng-reflect-ng-if": "false"
+}-->
+        <span _ngcontent-c2="" class="tooltip_span_menu" data-placement="right" data-toggle="tooltip" title="" data-original-title="Email"><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><a _ngcontent-c2="" aria-expanded="false" class="dropdown-toggle collapsed" data-toggle="collapse" href="#pageSubmenu7" id="toggle8"><i _ngcontent-c2="" class="fa fa-envelope"></i> <span _ngcontent-c2="">Email</span></a></span>
+          <!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><ul _ngcontent-c2="" class="collapse list-unstyled" id="pageSubmenu7">
+            <!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--><li _ngcontent-c2="" class="test placeholder">
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Placeholders"><i _ngcontent-c2="" class="fa fa-window-maximize fa-fw"></i> <span _ngcontent-c2="">Placeholders</span></a>
+            </li><li _ngcontent-c2="" class="test emailtemplate">
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Email Templates"><i _ngcontent-c2="" class="fa fa-envelope"></i> <span _ngcontent-c2="">Email Templates</span></a>
+            </li>
+          </ul>
+      </li><li _ngcontent-c2="" id="sel9" class="test log"> 
+        <!--bindings={
+  "ng-reflect-ng-if": "false"
+}-->
+        <span _ngcontent-c2="" class="tooltip_span_menu" data-placement="right" data-toggle="tooltip" title="" data-original-title="Logs"><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><a _ngcontent-c2="" aria-expanded="false" class="dropdown-toggle collapsed" data-toggle="collapse" href="#pageSubmenu8" id="toggle9"><i _ngcontent-c2="" class="fa fa-key fa-fw"></i> <span _ngcontent-c2="">Logs</span></a></span>
+          <!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><ul _ngcontent-c2="" class="collapse list-unstyled" id="pageSubmenu8">
+            <!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--><li _ngcontent-c2="" class="test loginlog">
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Login/Logout Logs"><i _ngcontent-c2="" class="fa fa-key fa-fw"></i> <span _ngcontent-c2="">Login/Logout Logs</span></a>
+            </li><li _ngcontent-c2="" class="test activitylog">
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Activity Logs"><i _ngcontent-c2="" class="fa fa-key fa-fw"></i> <span _ngcontent-c2="">Activity Logs</span></a>
+            </li><li _ngcontent-c2="" class="test emaillog">
+              <a _ngcontent-c2="" data-placement="right" data-toggle="tooltip" title="Email Logs"><i _ngcontent-c2="" class="fa fa-envelope"></i> <span _ngcontent-c2="">Email Logs</span></a>
+            </li>
+          </ul>
+      </li> 
+    </ul>
+		<div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+    </div>
+  </div>
+</nav>
+
+<div class="grey_content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-sm-12 col-md-offset-2">
+        <h1>Dashboard</h1>
+        <div class="row">
+		<div class="number_box">
+			<div class="col-md-3 col-sm-6 col-xs-12">
+			<div class="red_box">
+				<div class="white_box">
+					<div class="pull-left">
+						<h4>Client</h4>
+						<!-- <span>Total Client</span> -->
+					</div>
+					<div class="pull-right">
+						<span>100</span>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-12">
+			<div class="black_box">
+				<div class="white_box">
+					<div class="pull-left">
+						<h4>License Pack</h4>
+						<!-- <span>Total Licenses</span> -->
+					</div>
+					<div class="pull-right">
+						<span>250</span>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-12">
+			<div class="red_box">
+				<div class="white_box">
+					<div class="pull-left">
+						<h4>Sold License Pack</h4>
+						<!-- <span>Total Sell</span> -->
+					</div>
+					<div class="pull-right">
+						<span>180</span>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-12">
+			<div class="black_box">
+				<div class="white_box">
+					<div class="pull-left">
+						<h4>Total Earning</h4>
+						<!-- <span>Total Earning</span> -->
+					</div>
+					<div class="pull-right">
+						<span>$200</span>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="client_block">
+			<div class="col-md-8 col-sm-7 col-xs-12">
+				<div class="white_box">
+					<div class="topclient_box">
+						<div class="title_block">	
+							<div class="pull-left">
+								<h4>Top Client</h4>
+							</div>
+							<div class="pull-right">
+								<ul class="nav nav-pills">
+									<li class="active"><a data-toggle="pill" href="#home">By Earning</a></li>
+									<li><a data-toggle="pill" href="#menu1">By Licenses</a></li>
+								</ul>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="clearfix"></div>
+						<div class="tab-content">
+							<div id="home" class="tab-pane fade in active">
+								<div class="scroll_topclient">
+									<div class="client_section">
+											<div class="col-md-9 col-sm-8 no-padding">
+												<div class="media">
+													<div class="media-left">
+														<img src="http://learnfeedback.devbyopeneyes.com/assets/images/logo.png" class="media-object" style="width:100px">
+													</div>
+													<div class="media-body">
+													  <h4 class="media-heading">Client Name</h4>
+													  <p>client@email.com</p>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-4 no-padding">
+												<ul class="list-unstyled">
+													<li><h4>2567</h4><span>License</span></li>
+													<li><h4>276</h4><span>Dollar</span></li>
+												</ul>
+											</div>
+									</div>
+									<div class="clearfix"></div>
+									<div class="client_section">
+											<div class="col-md-9 col-sm-8 no-padding">
+												<div class="media">
+													<div class="media-left">
+														<img src="http://learnfeedback.devbyopeneyes.com/assets/images/logo.png" class="media-object" style="width:100px">
+													</div>
+													<div class="media-body">
+													  <h4 class="media-heading">Client Name</h4>
+													  <p>client@email.com</p>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-4 no-padding">
+												<ul class="list-unstyled">
+													<li><h4>2456</h4><span>License</span></li>
+													<li><h4>240</h4><span>Dollar</span></li>
+												</ul>
+											</div>
+									</div>
+									<div class="clearfix"></div>
+									<div class="client_section">
+											<div class="col-md-9 col-sm-8 no-padding">
+												<div class="media">
+													<div class="media-left">
+														<img src="http://learnfeedback.devbyopeneyes.com/assets/images/logo.png" class="media-object" style="width:100px">
+													</div>
+													<div class="media-body">
+													  <h4 class="media-heading">Client Name</h4>
+													  <p>client@email.com</p>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-4 no-padding">
+												<ul class="list-unstyled">
+													<li><h4>2100</h4><span>License</span></li>
+													<li><h4>211</h4><span>Dollar</span></li>
+												</ul>
+											</div>
+									</div>
+									<div class="clearfix"></div>
+									<div class="client_section">
+											<div class="col-md-9 col-sm-8 no-padding">
+												<div class="media">
+													<div class="media-left">
+														<img src="http://learnfeedback.devbyopeneyes.com/assets/images/logo.png" class="media-object" style="width:100px">
+													</div>
+													<div class="media-body">
+													  <h4 class="media-heading">Client Name</h4>
+													  <p>client@email.com</p>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-4 no-padding">
+												<ul class="list-unstyled">
+													<li><h4>1978</h4><span>License</span></li>
+													<li><h4>198</h4><span>Dollar</span></li>
+												</ul>
+											</div>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							<div id="menu1" class="tab-pane fade">
+								<div class="scroll_topclient1">
+									<div class="client_section">
+											<div class="col-md-9 col-sm-8 no-padding">
+												<div class="media">
+													<div class="media-left">
+														<img src="http://learnfeedback.devbyopeneyes.com/assets/images/logo.png" class="media-object" style="width:100px">
+													</div>
+													<div class="media-body">
+													  <h4 class="media-heading">Client Name</h4>
+													  <p>client@email.com</p>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-4 no-padding">
+												<ul class="list-unstyled">
+													<li><h4>1680</h4><span>License</span></li>
+													<li><h4>154</h4><span>Dollar</span></li>
+												</ul>
+											</div>
+									</div>
+									<div class="clearfix"></div>
+									<div class="client_section">
+											<div class="col-md-9 col-sm-8 no-padding">
+												<div class="media">
+													<div class="media-left">
+														<img src="http://learnfeedback.devbyopeneyes.com/assets/images/logo.png" class="media-object" style="width:100px">
+													</div>
+													<div class="media-body">
+													  <h4 class="media-heading">Client Name</h4>
+													  <p>client@email.com</p>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-4 no-padding">
+												<ul class="list-unstyled">
+													<li><h4>1498</h4><span>License</span></li>
+													<li><h4>146</h4><span>Dollar</span></li>
+												</ul>
+											</div>
+									</div>
+									<div class="clearfix"></div>
+										<div class="client_section">
+											<div class="col-md-9 col-sm-8 no-padding">
+												<div class="media">
+													<div class="media-left">
+														<img src="http://learnfeedback.devbyopeneyes.com/assets/images/logo.png" class="media-object" style="width:100px">
+													</div>
+													<div class="media-body">
+													  <h4 class="media-heading">Client Name</h4>
+													  <p>client@email.com</p>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-4 no-padding">
+												<ul class="list-unstyled">
+													<li><h4>1200</h4><span>License</span></li>
+													<li><h4>105</h4><span>Dollar</span></li>
+												</ul>
+											</div>
+										</div>
+										<div class="clearfix"></div>
+										<div class="client_section">
+											<div class="col-md-9 col-sm-8 no-padding">
+												<div class="media">
+													<div class="media-left">
+														<img src="http://learnfeedback.devbyopeneyes.com/assets/images/logo.png" class="media-object" style="width:100px">
+													</div>
+													<div class="media-body">
+													  <h4 class="media-heading">Client Name</h4>
+													  <p>client@email.com</p>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-4 no-padding">
+												<ul class="list-unstyled">
+													<li><h4>1045</h4><span>License</span></li>
+													<li><h4>98</h4><span>Dollar</span></li>
+												</ul>
+											</div>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>		
+			</div>
+			<div class="col-md-4 col-sm-5 col-xs-12">
+				<div class="white_box">
+					<div class="licensepack_box">
+						<div class="title_block">	
+							<div class="pull-left">
+								<h4>Trending License Packs</h4>
+							</div>
+							<div class="pull-right">
+								<select class="">
+									<option value="2018">2018</option>
+									<option value="2019">2017</option>
+									<option value="2020">2016</option>
+									<option value="2021">2015</option>
+								</select>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="clearfix"></div>
+						<div class="licensepack_block">
+							<h4>License Pack Name</h4>
+							<ul class="list-unstyled">
+								<li><h4>Total</h4><span>500</span></li>
+								<li><h4>Earning</h4><span>$50</span></li>
+								<li><h4>License</h4><span>2500</span></li>
+							</ul>
+							<!-- <div class="number"><span>1</span></div> -->
+							<div id="badge-ribbon1"><span>1</span></div>
+						</div>
+						<div class="licensepack_block">
+							<h4>License Pack Name</h4>
+							<ul class="list-unstyled">
+								<li><h4>Total</h4><span>350</span></li>
+								<li><h4>Earning</h4><span>$32</span></li>
+								<li><h4>License</h4><span>1900</span></li>
+							</ul>
+							<!-- <div class="number"><span>2</span></div> -->
+							<div id="badge-ribbon2"><span>2</span></div>
+						</div>
+						<div class="licensepack_block">
+							<h4>License Pack Name</h4>
+							<ul class="list-unstyled">
+								<li><h4>Total</h4><span>248</span></li>
+								<li><h4>Earning</h4><span>$27</span></li>
+								<li><h4>License</h4><span>1400</span></li>
+							</ul>
+							<!-- <div class="number"><span>3</span></div> -->
+							<div id="badge-ribbon3"><span>3</span></div>
+						</div>
+					</div>
+				</div>		
+			</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="col-md-6 col-sm-6">
+			<div class="dashboard_box admin_dashbox">
+			  	<div class="red_block"><h4>Invited Client (Latest 6 Month)</h4>
+				<div id="clientinvitation_chart" class="chart_block"></div>
+				</div>
+				<div class="white_block">
+					<div class="white_box">
+						<div class="title_block">	
+							<div class="pull-left">
+								<h4>Invited Client (Recent 5)</h4>
+							</div>
+							<div class="pull-right">
+								<a class="next_btn" href="#"><i class="fa fa-eye"></i>View All</a>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="clearfix"></div>
+						<div class="admin_tbl">
+						<div class="table-responsive">
+						<div class="scroll_topclient">
+						<table _ngcontent-c4="" class="table table-hover table-bordered">
+							<thead _ngcontent-c4="">
+							  <tr _ngcontent-c4="">
+								<!-- <th _ngcontent-c4="" class="text-center">No.</th> -->
+								<th _ngcontent-c4="">Invitation Date</th>
+								<th _ngcontent-c4="">Email Address</th>
+								<th _ngcontent-c4="">Comapny Name</th>
+								
+								<th _ngcontent-c4="">Status</th>
+							  </tr>
+							</thead>
+							<tbody _ngcontent-c4="">
+							  <!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--><tr _ngcontent-c4="">
+									<!-- <td _ngcontent-c4="" class="text-center">1</td> -->
+									<td _ngcontent-c4="">09/05/2018</td>
+									<td _ngcontent-c4="">uttam.bhut@theopeneyes.in</td>
+									<td _ngcontent-c4="">openeyes</td>
+									
+									<td _ngcontent-c4=""><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><span _ngcontent-c4="" class="success_status">Successful</span>
+										<!--bindings={
+  "ng-reflect-ng-if": "false"
+}-->
+										<!--bindings={
+  "ng-reflect-ng-if": "false"
+}-->
+									</td>
+								</tr><tr _ngcontent-c4="">
+									<!-- <td _ngcontent-c4="" class="text-center">2</td> -->
+									<td _ngcontent-c4="">08/09/2018</td>
+									<td _ngcontent-c4="">nirav.patel@theopeneyes.in</td>
+									<td _ngcontent-c4="">OpenEyes Technologies</td>
+									
+									<td _ngcontent-c4=""><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><span _ngcontent-c4="" class="success_status">Successful</span>
+										<!--bindings={
+  "ng-reflect-ng-if": "false"
+}-->
+										<!--bindings={
+  "ng-reflect-ng-if": "false"
+}-->
+									</td>
+								</tr>
+								
+							</tbody>
+						</table>
+						</div>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+			<div class="col-md-6 col-sm-6">
+			<div class="dashboard_box admin_dashbox">
+			  	<div class="red_block"><h4>Sold License Pack (Latest 6 Month)</h4>
+				<div id="licensepack_chart" class="chart_block"></div>
+				</div>
+				<div class="white_block">
+					<div class="white_box">
+					<div class="title_block">	
+						<div class="pull-left">
+							<h4>Sold License Pack (Recent 5)</h4>
+						</div>
+						<div class="pull-right">
+							<a class="next_btn" href="#"><i class="fa fa-eye"></i>View All</a>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="admin_tbl">
+					<div class="table-responsive">
+					<table _ngcontent-c4="" class="table table-hover table-bordered">
+							<thead _ngcontent-c4="">
+							  <tr _ngcontent-c4="">
+								<!-- <th _ngcontent-c4="" class="text-center">No.</th> -->
+								<th _ngcontent-c4="">Purchased Date</th>
+								<th _ngcontent-c4="">License Pack</th>
+								<th _ngcontent-c4="">License Pack Type</th>
+								<th _ngcontent-c4="">Client Name</th>
+								
+							  </tr>
+							</thead>
+							<tbody _ngcontent-c4="">
+								<!--bindings={
+  "ng-reflect-ng-for-of": "[object Object]"
+}--><tr _ngcontent-c4="">
+									<!-- <td _ngcontent-c4="" class="text-center">1</td> -->
+									<td _ngcontent-c4="">08/09/2018</td>
+									<td _ngcontent-c4="">Silver</td>
+									<td _ngcontent-c4="">Add On</td>
+									<td _ngcontent-c4="">Pooja Patel</td>
+									
+								</tr>
+								<tr _ngcontent-c4="">
+									<!-- <td _ngcontent-c4="" class="text-center">1</td> -->
+									<td _ngcontent-c4="">05/12/2018</td>
+									<td _ngcontent-c4="">Platinum</td>
+									<td _ngcontent-c4="">Add On</td>
+									<td _ngcontent-c4="">uttam patel</td>
+									
+								</tr>
+								<tr _ngcontent-c4="">
+									<!-- <td _ngcontent-c4="" class="text-center">1</td> -->
+									<td _ngcontent-c4="">02/21/2018</td>
+									<td _ngcontent-c4="">Add On - 10</td>
+									<td _ngcontent-c4="">Add On</td>
+									<td _ngcontent-c4="">Trushant Mehta</td>
+									
+								</tr>
+								
+							</tbody>
+						</table>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="col-md-6 col-sm-6">
+			<div class="dashboard_box admin_dashbox">
+			<div class="licensepack_sell">
+			  	<div class="red_block">
+					<div class="pull-left">
+						<h4>License Pack Sell</h4>
+					</div>
+					<div class="pull-right">
+						<select class="">
+							<option value="2018">2018</option>
+							<option value="2019">2017</option>
+							<option value="2020">2016</option>
+							<option value="2021">2015</option>
+						</select>
+					</div>
+					<div class="clearfix"></div>
+					<h1><span>$</span>22,000</h1>
+					<div class="earning_button">
+						<span>Inclusive All Earning</span>
+					</div>
+				</div>
+				<div class="white_block">
+					<div class="white_box">
+						<ul class="nav nav-pills">
+							<li class="active"><a data-toggle="pill" href="#graph1">Quater 1</a></li>
+							<li><a data-toggle="pill" href="#graph2">Quater 2</a></li>
+							<li><a data-toggle="pill" href="#graph3">Quater 3</a></li>
+							<li><a data-toggle="pill" href="#graph4">Quater 4</a></li>
+						</ul>
+						<div class="tab-content">
+							<div id="graph1" class="tab-pane fade in active">
+								<div id="licensepack_sell" class="chart_block"></div>
+							</div>
+							<div id="graph2" class="tab-pane fade">
+								<div id="licensepack_sell1" class="chart_block"></div>
+							</div>
+							<div id="graph3" class="tab-pane fade">	
+								<div id="licensepack_sell2" class="chart_block"></div>
+							</div>
+							<div id="graph4" class="tab-pane fade">
+								<div id="licensepack_sell3" class="chart_block"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+			</div>
+			<div class="col-md-6 col-sm-6">
+				<div class="white_box">
+				<div class="notifications">
+					<div class="title_block">	
+						<div class="pull-left">
+							<h4>Recent Notifications</h4>
+						</div>
+						<div class="pull-right">
+							<ul class="nav nav-pills">
+								<li class="active"><a data-toggle="pill" href="#home1">Today</a></li>
+								<li><a data-toggle="pill" href="#menu2">Month</a></li>
+							</ul>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="clearfix"></div>
+				<div class="tab-content">
+					<div id="home1" class="tab-pane fade in active">
+					<div class="scroll_notification">
+						<div class="notification_red">
+							<div class="row">
+								<div class="col-md-3 col-sm-3">
+									<div class="notification_time">
+										<span>07:21 AM</span>
+									</div>
+								</div>
+								<div class="col-md-9 col-sm-9">
+									<div class="notification_desc">
+										<p>Add On - 10 - License Pack Purchased</p>
+										<span>By Uttam</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="notification_black">
+							<div class="row">
+								<div class="col-md-3 col-sm-3">
+									<div class="notification_time">
+										<span>02:00 PM</span>
+									</div>
+								</div>
+								<div class="col-md-9 col-sm-9">
+									<div class="notification_desc">
+										<p>Gold - License Pack Purchased</p>
+										<span>By Trushant</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="notification_red">
+							<div class="row">
+								<div class="col-md-3 col-sm-3">
+									<div class="notification_time">
+										<span>08:54 PM</span>
+									</div>
+								</div>
+								<div class="col-md-9 col-sm-9">
+									<div class="notification_desc">
+										<p>Silver - License Pack Purchased</p>
+										<span>By Pooja</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="notification_black">
+							<div class="row">
+								<div class="col-md-3 col-sm-3">
+									<div class="notification_time">
+										<span>10:00 AM</span>
+									</div>
+								</div>
+								<div class="col-md-9 col-sm-9">
+									<div class="notification_desc">
+										<p>Gold - License Pack Purchased</p>
+										<span>By Pooja</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="notification_red">
+							<div class="row">
+								<div class="col-md-3 col-sm-3">
+									<div class="notification_time">
+										<span>07:21 AM</span>
+									</div>
+								</div>
+								<div class="col-md-9 col-sm-9">
+									<div class="notification_desc">
+										<p>Add On - 10 - License Pack Purchased</p>
+										<span>By Uttam</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div id="menu2" class="tab-pane fade">
+					<div class="scroll_notification1">
+						<div class="notification_red">
+							<div class="row">
+								<div class="col-md-3 col-sm-3">
+									<div class="notification_time">
+										<span>Sep 11,2018</span>
+									</div>
+								</div>
+								<div class="col-md-9 col-sm-9">
+									<div class="notification_desc">
+										<p>Gold - License Pack Purchased</p>
+										<span>By Trushant</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="notification_black">
+							<div class="row">
+								<div class="col-md-3 col-sm-3">
+									<div class="notification_time">
+										<span>Sep 16,2018</span>
+									</div>
+								</div>
+								<div class="col-md-9 col-sm-9">
+									<div class="notification_desc">
+										<p>Add On - 10 - License Pack Purchased</p>
+										<span>By Uttam</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="notification_red">
+							<div class="row">
+								<div class="col-md-3 col-sm-3">
+									<div class="notification_time">
+										<span>Aug 23,2018</span>
+									</div>
+								</div>
+								<div class="col-md-9 col-sm-9">
+									<div class="notification_desc">
+										<p>Silver - License Pack Purchased</p>
+										<span>By Pooja</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="notification_black">
+							<div class="row">
+								<div class="col-md-3 col-sm-3">
+									<div class="notification_time">
+										<span>Jun 17,2018</span>
+									</div>
+								</div>
+								<div class="col-md-9 col-sm-9">
+									<div class="notification_desc">
+										<p>Gold - License Pack Purchased</p>
+										<span>By Trushant</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="notification_red">
+							<div class="row">
+								<div class="col-md-3 col-sm-3">
+									<div class="notification_time">
+										<span>Sep 11,2018</span>
+									</div>
+								</div>
+								<div class="col-md-9 col-sm-9">
+									<div class="notification_desc">
+										<p>Gold - License Pack Purchased</p>
+										<span>By Trushant</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</div>
+				</div>
+			  </div>		
+			</div>
+			<div class="clearfix"></div>			
+			<!-- <div class="col-md-6 col-sm-6">
+				<div class="white_box">				
+					<div class="overall_answer">
+						<div class="pull-left">
+							<h4>Overall Answer</h4>
+						</div>
+						<div class="pull-right">
+							<select class="">
+								<option value="2018">All</option>
+								<option value="2019">Category1</option>
+								<option value="2020">Category2</option>
+								<option value="2021">Category3</option>
+							</select>
+						</div>
+						<div class="clearfix"></div>
+						<div id="overall_answer" class="chart_block"></div>						
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6">
+				<div class="white_box">				
+					<div class="feedback_completion">
+						<div class="pull-left">
+							<h4>Feedback Completion Ratio</h4>
+						</div>
+						<div class="pull-right">
+							<select class="">
+								<option value="2018">2018</option>
+								<option value="2019">2019</option>
+								<option value="2020">2020</option>
+								<option value="2021">2021</option>
+							</select>
+						</div>
+						<div class="clearfix"></div>	
+						<div id="feedback_ratio" class="chart_block"></div>						
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="col-md-12 col-sm-12">
+				<div class="white_box">				
+				<div class="Inquiry">
+			  	<h4>Recent Inquiry</h4>
+				<div class="admin_tbl">
+				<div class="table-responsive">
+				<table class="table table-hover table-bordered">
+                <thead>
+                  <tr>
+                    <th>No.</th>
+					<th>Name</th>
+					<th>Email Address</th>
+					<th>Date</th>
+					<th>Message</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+					<td>Krupali</td>
+                    <td>abc@gmail.com</td>
+                    <td>03/26/2018</td>
+					<td>Lorem ipsum dolor sit amit,consectetur eiusmdd tempor</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+					<td>Mitesh</td>
+                    <td>xyz@gmail.com</td>
+                    <td>03/24/2018</td>
+					<td>Lorem ipsum dolor sit amit,consectetur eiusmdd tempor</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+					<td>Uttam</td>
+                    <td>abc.youtsite@gmail.com</td>
+                    <td>03/22/2018</td>
+					<td>Lorem ipsum dolor sit amit,consectetur eiusmdd tempor</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+					<td>Pooja</td>
+                    <td>xyz.site@gmail.com</td>
+                    <td>03/20/2018</td>
+					<td>Lorem ipsum dolor sit amit,consectetur eiusmdd tempor</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+					<td>Vidhi</td>
+                    <td>site@gmail.com</td>
+                    <td>03/18/2018</td>
+					<td>Lorem ipsum dolor sit amit,consectetur eiusmdd tempor</td>
+                  </tr>
+                </tbody>
+              </table>
+			  </div>
+			 </div>
+			 </div>
+			  </div>
+			</div> -->
+			<div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+<div class="go_top"><i class="fa fa-angle-double-up"></i></div>
+<footer class="footer_admin">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-12 text-left">© 2018<a href="#"> Assessment, Education, and Research Experts</a></div>
+			<div class="col-md-6 col-sm-12 text-right">Powered by <a href="#">OpenEyes Technologies, Inc.</a></div>
+		</div>
+	</div>
+</footer>
+<div class="clearfix"></div>
+<script type="text/javascript" src="http://learnfeedback.devbyopeneyes.com/assets/js/jquery-1.11.3.min.js"></script>
+
+
+<script type="text/javascript" src="http://learnfeedback.devbyopeneyes.com/assets/js/amcharts.js"></script>
+<script type="text/javascript" src="http://learnfeedback.devbyopeneyes.com/assets/js/bootstrap-toggle.min.js"></script>
+<script type="text/javascript" src="http://learnfeedback.devbyopeneyes.com/assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://learnfeedback.devbyopeneyes.com/assets/js/custom.js"></script>
+<script type="text/javascript" src="http://learnfeedback.devbyopeneyes.com/assets/js/customInput.js"></script>
+<script type="text/javascript" src="http://learnfeedback.devbyopeneyes.com/assets/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="http://learnfeedback.devbyopeneyes.com/assets/js/dataTables.responsive.min.js"></script>
+
+<script type="text/javascript" src="http://learnfeedback.devbyopeneyes.com/assets/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="http://learnfeedback.devbyopeneyes.com/assets/js/perfect-scrollbar.js"></script>
+<script type="text/javascript" src="http://learnfeedback.devbyopeneyes.com/assets/js/pie.js"></script>
+<script type="text/javascript" src="http://learnfeedback.devbyopeneyes.com/assets/js/responsive.min.js"></script>
+<script type="text/javascript" src="http://learnfeedback.devbyopeneyes.com/assets/js/responsiveamcharts.js"></script>
+<script type="text/javascript" src="http://learnfeedback.devbyopeneyes.com/assets/js/serial.js"></script>
+
+<script type="text/javascript">
+var chart = AmCharts.makeChart("clientinvitation_chart", {
+        "type": "serial",
+        "theme": "none",
+      "dataProvider": [{
+            "month": "April",
+            "value": 5
+        }, {
+            "month": "May",
+            "value": 23
+        }, {
+            "month": "June",
+            "value": 12
+        }, {
+            "month": "July",
+            "value": 56
+        }, {
+            "month": "August",
+            "value": 21
+        }, {
+            "month": "September",
+            "value": 9
+        }],
+        "valueAxes": [{
+            "integersOnly": true,
+        "precision" : 0,
+            "axisAlpha": 1,
+            "dashLength": 0,
+            "gridCount": 0,
+        "gridAlpha": 0,
+            "labelsEnabled": true,
+			"axisColor" : "#000",
+        "gridThickness": 0,
+		"position": "left",
+    "title": "No. of Clients"
+        }],
+        "startDuration": 0,
+        "graphs": [{
+            "balloonText": "[[month]]<br>Invitation : [[value]]",
+            "bullet": "round",
+            "title": "",
+            "valueField": "value",
+        "fillAlphas": 0,
+        "precision" : 0,
+        "lineColor": "var(--theme-color)",
+        "lineThickness": 2,
+        "lineAlpha": 1,
+        }],
+        "chartCursor": {
+            "cursorAlpha": 0,
+            "zoomable": false,
+        "valueZoomable": false,
+        "valueLineBalloonEnabled": false,
+        "valueLineEnabled": false,
+        },
+		
+        "categoryField": "month",
+      "categoryAxis": {
+        "gridPosition": "start",
+            "axisAlpha": 1,
+            "dashLength": 0,
+            "gridCount": 0,
+        "gridAlpha": 0,
+            "labelsEnabled": true,
+			<!-- "labelRotation": 90, -->
+        "axisColor" : "#000",
+		"position": "bottom",
+    "title": "Month",
+      }
+      });
+
+      //INVITATION CHART
+      //LICENSE PACK CHART
+      var chart = AmCharts.makeChart("licensepack_chart", {
+        "type": "serial",
+        "theme": "none",
+      "dataProvider": [{
+            "month": "April",
+            "value": 0
+        }, {
+            "month": "May",
+            "value": 8
+        }, {
+            "month": "June",
+            "value": 12
+        }, {
+            "month": "July",
+            "value": 18
+        }, {
+            "month": "August",
+            "value": 2
+        }, {
+            "month": "September",
+            "value": 7
+        }],
+        "valueAxes": [{
+            "integersOnly": true,
+        "precision" : 0,
+		"axisColor" : "#000",
+            "axisAlpha": 1,
+            "dashLength": 0,
+            "gridCount": 0,
+        "gridAlpha": 0,
+            "labelsEnabled": true,
+        "gridThickness": 0,
+		"position": "left",
+    "title": "No. of License Pack"
+        }],
+        "startDuration": 0,
+        "graphs": [{
+            "balloonText": "[[month]]<br>License Pack : [[value]]",
+            "bullet": "round",
+            "title": "",
+            "valueField": "value",
+        "fillAlphas": 0,
+        "precision" : 0,
+        "lineColor": "var(--theme-color)",
+        "lineThickness": 2,
+        "lineAlpha": 1,
+        }],
+        "chartCursor": {
+            "cursorAlpha": 0,
+            "zoomable": false,
+        "valueZoomable": false,
+        "valueLineBalloonEnabled": false,
+        "valueLineEnabled": false,
+        },
+		
+        "categoryField": "month",
+      "categoryAxis": {
+        "gridPosition": "start",
+        "precision" : 0,
+            "axisAlpha": 1,
+            "dashLength": 0,
+            "gridCount": 0,
+        "gridAlpha": 0,
+            "labelsEnabled": true,
+			<!-- "labelRotation": 90, -->
+        "axisColor" : "#000",
+		"position": "bottom",
+    "title": "Month"
+      }
+      });
+//LICENSE PACK CHART
+//LINE CHART END
+//LICENSE PACK SELL CHART
+var chart = AmCharts.makeChart("licensepack_sell", {
+  "type": "serial",
+  "theme": "none",
+  "dataProvider": [{
+    "country": "Silver",
+    "visits": 302,
+    "color": "#b01116"
+  }, {
+    "country": "Gold",
+    "visits": 111,
+    "color": "#b01116"
+  }, {
+    "country": "Platinum",
+    "visits": 70,
+    "color": "#b01116"
+  }, {
+    "country": "Diamond",
+    "visits": 98,
+    "color": "#b01116"
+  }, {
+    "country": "Add On-10",
+    "visits": 12,
+    "color": "#b01116"
+  }],
+  "valueAxes": [{
+    "axisAlpha": 0,
+    "position": "left",
+	"gridAlpha": 0,
+	"labelsEnabled": false,
+	"position": "left",
+    "title": "Total Selling"
+  }],
+  "startDuration": 1,
+  "graphs": [{
+    "balloonText": "<b>[[category]]: [[value]]</b>",
+    "fillColorsField": "color",
+    "fillAlphas": 0.9,
+    "lineAlpha": 0.2,
+    "type": "column",
+    "valueField": "visits"
+  }],
+  "chartCursor": {
+    "categoryBalloonEnabled": false,
+    "cursorAlpha": 0,
+    "zoomable": false
+  },
+  "categoryField": "country",
+  "categoryAxis": {
+	"axisAlpha": 0,
+	"gridPosition": "start",
+	"gridAlpha": 0,
+	"position": "left",
+	"labelsEnabled": false,
+	"position": "bottom",
+    "title": "License Packs"
+  }
+});
+//LICENSE PACK SELL CHART END
+
+//LICENSE PACK SELL CHART
+var chart = AmCharts.makeChart("licensepack_sell1", {
+  "type": "serial",
+  "theme": "none",
+  "dataProvider": [{
+    "country": "Silver",
+    "visits": 302,
+    "color": "#b01116"
+  }, {
+    "country": "Gold",
+    "visits": 111,
+    "color": "#b01116"
+  }, {
+    "country": "Platinum",
+    "visits": 70,
+    "color": "#b01116"
+  }, {
+    "country": "Diamond",
+    "visits": 98,
+    "color": "#b01116"
+  }, {
+    "country": "Add On-10",
+    "visits": 12,
+    "color": "#b01116"
+  }],
+  "valueAxes": [{
+    "axisAlpha": 0,
+    "position": "left",
+	"gridAlpha": 0,
+	"labelsEnabled": false,
+	"position": "left",
+    "title": "Total Selling"
+  }],
+  "startDuration": 1,
+  "graphs": [{
+    "balloonText": "<b>[[category]]: [[value]]</b>",
+    "fillColorsField": "color",
+    "fillAlphas": 0.9,
+    "lineAlpha": 0.2,
+    "type": "column",
+    "valueField": "visits"
+  }],
+  "chartCursor": {
+    "categoryBalloonEnabled": false,
+    "cursorAlpha": 0,
+    "zoomable": false
+  },
+  "categoryField": "country",
+  "categoryAxis": {
+	"axisAlpha": 0,
+	"gridPosition": "start",
+	"gridAlpha": 0,
+	"position": "left",
+	"labelsEnabled": false,
+	"position": "bottom",
+    "title": "License Packs"
+  }
+});
+//LICENSE PACK SELL CHART END
+
+//LICENSE PACK SELL CHART
+var chart = AmCharts.makeChart("licensepack_sell2", {
+  "type": "serial",
+  "theme": "none",
+  "dataProvider": [{
+    "country": "Silver",
+    "visits": 302,
+    "color": "#b01116"
+  }, {
+    "country": "Gold",
+    "visits": 111,
+    "color": "#b01116"
+  }, {
+    "country": "Platinum",
+    "visits": 70,
+    "color": "#b01116"
+  }, {
+    "country": "Diamond",
+    "visits": 98,
+    "color": "#b01116"
+  }, {
+    "country": "Add On-10",
+    "visits": 12,
+    "color": "#b01116"
+  }],
+  "valueAxes": [{
+    "axisAlpha": 0,
+    "position": "left",
+	"gridAlpha": 0,
+	"labelsEnabled": false,
+	"position": "left",
+    "title": "Total Selling"
+  }],
+  "startDuration": 1,
+  "graphs": [{
+    "balloonText": "<b>[[category]]: [[value]]</b>",
+    "fillColorsField": "color",
+    "fillAlphas": 0.9,
+    "lineAlpha": 0.2,
+    "type": "column",
+    "valueField": "visits"
+  }],
+  "chartCursor": {
+    "categoryBalloonEnabled": false,
+    "cursorAlpha": 0,
+    "zoomable": false
+  },
+  "categoryField": "country",
+  "categoryAxis": {
+	"axisAlpha": 0,
+	"gridPosition": "start",
+	"gridAlpha": 0,
+	"position": "left",
+	"labelsEnabled": false,
+	"position": "bottom",
+    "title": "License Packs"
+  }
+});
+//LICENSE PACK SELL CHART END
+
+//LICENSE PACK SELL CHART
+var chart = AmCharts.makeChart("licensepack_sell3", {
+  "type": "serial",
+  "theme": "none",
+  "dataProvider": [{
+    "country": "Silver",
+    "visits": 302,
+    "color": "#b01116"
+  }, {
+    "country": "Gold",
+    "visits": 111,
+    "color": "#b01116"
+  }, {
+    "country": "Platinum",
+    "visits": 70,
+    "color": "#b01116"
+  }, {
+    "country": "Diamond",
+    "visits": 98,
+    "color": "#b01116"
+  }, {
+    "country": "Add On-10",
+    "visits": 12,
+    "color": "#b01116"
+  }],
+  "valueAxes": [{
+    "axisAlpha": 0,
+    "position": "left",
+	"gridAlpha": 0,
+	"labelsEnabled": false,
+	"position": "left",
+    "title": "Total Selling"
+  }],
+  "startDuration": 1,
+  "graphs": [{
+    "balloonText": "<b>[[category]]: [[value]]</b>",
+    "fillColorsField": "color",
+    "fillAlphas": 0.9,
+    "lineAlpha": 0.2,
+    "type": "column",
+    "valueField": "visits"
+  }],
+  "chartCursor": {
+    "categoryBalloonEnabled": false,
+    "cursorAlpha": 0,
+    "zoomable": false
+  },
+  "categoryField": "country",
+  "categoryAxis": {
+	"axisAlpha": 0,
+	"gridPosition": "start",
+	"gridAlpha": 0,
+	"position": "left",
+	"labelsEnabled": false,
+	"position": "bottom",
+    "title": "License Packs"
+  }
+});
+//LICENSE PACK SELL CHART END
+
+
+//OVERALL ANSWER CHART
+var chart = AmCharts.makeChart("overall_answer", {
+  "type": "pie",
+  "startDuration": 0,
+   "theme": "none",
+  "legend":{
+   	"position":"bottom",
+  },
+  "innerRadius": "30%",
+  "dataProvider": [{
+    "country": "Always",
+    "litres": 50,
+	"color": "#6a0000"
+  }, {
+    "country": "Frequently",
+    "litres": 45,
+	"color": "#940000"
+  }, {
+    "country": "Occasionally",
+    "litres": 40,
+	"color": "#7e7e7e"
+  }, {
+    "country": "Rarely",
+    "litres": 35,
+	"color": "#464646"
+  }, {
+    "country": "Never",
+    "litres": 30,
+	"color": "#000000"
+  }],
+  /* "responsive": {
+			"enabled": true
+			}, */
+  "valueField": "litres",
+  "titleField": "country",
+  "colorField": "color",
+  "labelsEnabled": false,
+  "autoMargins": false,
+  "marginTop": 0,
+  "marginBottom": 0,
+  "marginLeft": 0,
+  "marginRight": 0,
+  "pullOutRadius": 0,
+});
+//OVERALL ANSWER CHART END
+
+//FEEDBACK RATIO CHART
+var chart = AmCharts.makeChart( "feedback_ratio", {
+  "type": "serial",
+  "theme": "none",
+  "dataProvider": [ {
+    "country": "< 1 Day",
+    "visits": 2025,
+	"color": "#b61110"
+  }, {
+    "country": "< 2 Days",
+    "visits": 1882,
+	"color": "#000000"
+  }, {
+    "country": "< 4 Days",
+    "visits": 1809,
+	"color": "#b61110"
+  }, {
+    "country": "< Week",
+    "visits": 1322,
+	"color": "#000000"
+  }, {
+    "country": "Never",
+    "visits": 1122,
+	"color": "#b61110"
+  }],
+  "valueAxes": [ {
+    "gridColor": "#FFFFFF",
+    "gridAlpha": 0,
+	"axisAlpha": 0,
+	"labelsEnabled": false,
+	"position": "left",
+    "title": "Users"
+	
+  } ],
+  "gridAboveGraphs": true,
+  "startDuration": 1,
+  "graphs": [ {
+    "balloonText": "[[category]]: <b>[[value]]</b>",
+	"fillColorsField": "color",
+    "fillAlphas": 0.8,
+    "lineAlpha": 0.2,
+    "type": "column",
+    "valueField": "visits"
+  } ],
+  "chartCursor": {
+    "categoryBalloonEnabled": false,
+    "cursorAlpha": 0,
+    "zoomable": false
+  },
+  "categoryField": "country",
+  "categoryAxis": {
+    "gridPosition": "start",
+    "gridAlpha": 0,
+	"axisAlpha": 0,
+    "tickPosition": "start",
+    "tickLength": 20,
+	"labelsEnabled": true,
+	"position": "bottom",
+    "title": "Feedback Completing Days"
+  }
+} );
+//FEEDBACK RATIO CHART END
+
+// PERFECT SCROLLBAR
+new PerfectScrollbar('.scroll_notification');
+new PerfectScrollbar('.scroll_notification1');
+new PerfectScrollbar('.scroll_topclient');
+new PerfectScrollbar('.scroll_topclient1');
+// END PERFECT SCROLLBAR
+
+</script>
+<script type="text/javascript">
+
+new PerfectScrollbar('.ul_block'); 
+$('body').tooltip({
+        selector: '[data-toggle="tooltip"], [title]:not([data-toggle="popover"])',
+        trigger: 'hover',
+        container: 'body'
+    }).on('click mousedown mouseup', '[data-toggle="tooltip"], [title]:not([data-toggle="popover"])', function () {
+        $('[data-toggle="tooltip"], [title]:not([data-toggle="popover"])').tooltip('destroy');
+    });				
+	 $('.hamburger').click(function(){
+    $(this).toggleClass("active");
+	$('.ul_block').toggleClass("active");
+});
+$('.mainscreenhamburger').click(function(){
+    $(this).toggleClass("active_togglemainscreen");
+	$('#container').toggleClass("active_ulmainscreen");
+	$('.col-md-10.col-sm-12.col-md-offset-2').toggleClass("active_divmainscreen");
+	$('footer.footer_admin').toggleClass("active_footermainscreen");
+});
+  dash(){
+    $(".test").removeClass("active");
+    $(".dropdown-toggle ").addClass("collapsed");
+    $(".dropdown-toggle ").attr("aria-expanded","false");
+    $(".test").parent().removeClass("in");
+    $("#dash").addClass("active");
+  }
+toogle(id){
+	if ($("#toggle"+id).hasClass("collapsed")) {
+	 $(".test").removeClass("active");
+    $(".dropdown-toggle").addClass("collapsed");
+    $(".dropdown-toggle").attr("aria-expanded","false");
+    $(".test").parent().removeClass("in");
+    }
+	else{
+	}	
+}
+  menuopen(path){
+    this.globals.msgflag = false;	  
+    this.globals.currentLink = this.router.url;
+    this.router.navigate([path]);	
+  }
+  
+</script>
+</body>
+</html>
