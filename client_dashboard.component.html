@@ -97,7 +97,7 @@ header .user_dropdown li ul.dropdown-menu li.img_name {background: url(dashboard
              
             <div _ngcontent-c1="" class="col-md-9 col-sm-9 col-xs-5 back_button">
 			<div class="pull-right">
-				<a class="next_btn" href="http://demo.learnfeedback.com/" target="_blank">Back</a>
+				<a class="next_btn" href="http://demo.learnfeedback.com/">Back</a>
 			</div>
 			</div>
             
@@ -945,7 +945,7 @@ header .user_dropdown li ul.dropdown-menu li.img_name {background: url(dashboard
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-sm-12 text-left">© 2018<a href="#"> Assessment, Education, and Research Experts</a></div>
-			<div class="col-md-6 col-sm-12 text-right">Powered by <a href="#">OpenEyes Technologies, Inc.</a></div>
+			<div class="col-md-6 col-sm-12 text-right">Powered by <a href="#" title="Open in new tab">OpenEyes Technologies, Inc.</a></div>
 		</div>
 	</div>
 </footer>
@@ -969,6 +969,15 @@ header .user_dropdown li ul.dropdown-menu li.img_name {background: url(dashboard
 <script type="text/javascript" src="http://learnfeedback.devbyopeneyes.com/assets/js/responsiveamcharts.js"></script>
 <script type="text/javascript" src="http://learnfeedback.devbyopeneyes.com/assets/js/serial.js"></script>
 <script type="text/javascript">
+
+$('body').tooltip({
+        selector: '[data-toggle="tooltip"], [title]:not([data-toggle="popover"])',
+        trigger: 'hover',
+        container: 'body'
+    }).on('click mousedown mouseup', '[data-toggle="tooltip"], [title]:not([data-toggle="popover"])', function () {
+        $('[data-toggle="tooltip"], [title]:not([data-toggle="popover"])').tooltip('destroy');
+    });	
+
 //OVERALL ANSWER CHART
 var chart = AmCharts.makeChart("feedback_chart", {
   "type": "pie",
@@ -1153,6 +1162,7 @@ new PerfectScrollbar('.scroll_notification1');
 new PerfectScrollbar('.scroll_topclient');
 new PerfectScrollbar('.scroll_topclient1');
 // END PERFECT SCROLLBAR
+
 
 </script>
 </body>
