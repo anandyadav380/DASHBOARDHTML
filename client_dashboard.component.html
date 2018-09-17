@@ -302,7 +302,7 @@ header .user_dropdown li ul.dropdown-menu li.img_name {background: url(dashboard
 				<div class="white_block">
 					<div class="box"><i class="fa fa-user-plus"></i>
 						<div class="title">Registered<br>User</div>
-						<div class="number">1358<span class="red"></span></div>
+						<div class="number">1358</div>
 					</div>
 					<div class="box"><i class="fa fa-commenting-o"></i>
 						<div class="title">Completed Feedback</div>
@@ -310,7 +310,7 @@ header .user_dropdown li ul.dropdown-menu li.img_name {background: url(dashboard
 					</div>
 					<div class="box"><i class="fa fa-calendar"></i>
 						<div class="title">Incomplete Feedback</div>
-						<div class="number">373<span class="white"></span></div>
+						<div class="number">373<span class="red"></span></div>
 					</div>
 				</div>
 			</div>
@@ -323,15 +323,15 @@ header .user_dropdown li ul.dropdown-menu li.img_name {background: url(dashboard
 				<div class="white_block">
 					<div class="box"><i class="fa fa-key"></i>
 						<div class="title">Total<br>Licenses</div>
-						<div class="number">1680<span class="red"></span></div>
+						<div class="number">1680</div>
 					</div>
 					<div class="box"><i class="fa fa-user-plus"></i>
 						<div class="title">Assigned<br>Licenses</div>
-						<div class="number">1430<span class="white"></span></div>
+						<div class="number">1430<span class="black"></span></div>
 					</div>
 					<div class="box"><i class="fa fa-calendar-times-o"></i>
 						<div class="title">Remaining<br>Licenses</div>
-						<div class="number">250<span class="black"></span></div>
+						<div class="number">250<span class="red"></span></div>
 					</div>
 				</div>
 			</div>
@@ -966,19 +966,15 @@ var chart = AmCharts.makeChart("feedback_chart", {
   "type": "pie",
   "startDuration": 0,
    "theme": "none",
-  "innerRadius": "30%",
+  "innerRadius": "50%",
   "dataProvider": [{
-    "country": "Registered User",
-    "litres": 1358,
-	"color": "#b01116"
-  }, {
     "country": "Completed Feedback",
     "litres": 985,
 	"color": "#000000"
   }, {
     "country": "Incomplete Feedback",
     "litres": 373,
-	"color": "#ffffff"
+	"color": "#b01116"
   }],
   /* "responsive": {
 			"enabled": true
@@ -1000,19 +996,15 @@ var chart = AmCharts.makeChart("license_chart", {
   "type": "pie",
   "startDuration": 0,
    "theme": "none",
-  "innerRadius": "30%",
+  "innerRadius": "50%",
   "dataProvider": [{
-    "country": "Total Licenses",
-    "litres": 1680,
-	"color": "#b01116"
-  }, {
     "country": "Assigned Licenses",
     "litres": 1430,
-	"color": "#ffffff"
+	"color": "#000000"
   }, {
     "country": "Remaining Licenses",
     "litres": 250,
-	"color": "#000000"
+	"color": "#b01116"
   }],
   /* "responsive": {
 			"enabled": true
@@ -1104,7 +1096,7 @@ var chart = AmCharts.makeChart( "feedback_ratio", {
     "gridColor": "#FFFFFF",
     "gridAlpha": 0,
 	"axisAlpha": 1,
-	"labelsEnabled": false,
+	"labelsEnabled": true,
 	"position": "left",
     "title": "Users (in Percentage)"
 	
