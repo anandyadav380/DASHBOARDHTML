@@ -17,6 +17,7 @@
 <link rel="stylesheet" type="text/css" href="http://learnfeedback.devbyopeneyes.com/assets/css/responsive.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <style>
+.white_box{float:left;width:100%;}
 .number_box .red_box .white_box{border-bottom: 3px solid #b11016;}
 .number_box .black_box .white_box{border-bottom: 3px solid #000;}
 .number_box .red_box h4,.number_box .black_box h4{font-size: 16px;margin-top:5px;}
@@ -31,7 +32,7 @@
 .topclient_box .nav > li > a:focus,.topclient_box .nav > li > a:hover,.topclient_box .nav-pills > li.active > a, .topclient_box .nav-pills > li.active > a:focus, .topclient_box .nav-pills > li.active > a:hover{background: var(--theme-color);border-radius: 4px;color: #fff;border: 0;padding: 10px 15px;line-height: 12px;transition: all .3s ease-in-out;box-shadow: 0 5px 10px 2px rgba(88,103,221,.19);}
 .topclient_box .nav > li > a{line-height:12px;}
 .topclient_box .title_block,.licensepack_box .title_block{border-bottom: 2px solid #f3f3f3;padding-bottom: 10px;}
-.licensepack_box .licensepack_block{padding: 10px;margin-bottom: 5px;border: 1px solid #ddd;position:relative;border-radius:5px;}
+.licensepack_box .licensepack_block{float:left;width:100%;padding: 10px;margin-bottom: 5px;border: 1px solid #ddd;position:relative;border-radius:5px;}
 .licensepack_box .licensepack_block ul li{display:inline-block;padding-right:15px;}
 .licensepack_box .licensepack_block h4{color: #000;}
 .licensepack_box .licensepack_block ul li h4{font-size:14px;color: #b01116;}
@@ -46,14 +47,14 @@
 .licensepack_sell .white_block .nav{text-align:center;padding-top:20px;}
 .licensepack_sell .white_block .nav-pills > li{float:none;display:inline-block;}
 .topclient_box .media-left{padding-right:25px;}
-.licensepack_box .licensepack_block #badge-ribbon1 {position: absolute;background: #D6AF36;height: 50px;width: 50px;border-radius: 50px;right: 10px;top: 20px;}
+<!-- .licensepack_box .licensepack_block #badge-ribbon1 {position: absolute;background: #D6AF36;height: 50px;width: 50px;border-radius: 50px;right: 10px;top: 20px;}
 .licensepack_box .licensepack_block #badge-ribbon1:before,.licensepack_box .licensepack_block #badge-ribbon1:after {content: '';position: absolute;border-bottom: 35px solid #D6AF36;border-left: 10px solid transparent;border-right: 10px solid transparent;top: 37px;left: 0px;-webkit-transform: rotate(-140deg);-moz-transform: rotate(-140deg);-ms-transform: rotate(-140deg);-o-transform: rotate(-140deg);}
 .licensepack_box .licensepack_block #badge-ribbon2 {position: absolute;background: #A7A7AD;height: 50px;width: 50px;border-radius: 50px;right: 10px;top: 20px;}
 .licensepack_box .licensepack_block #badge-ribbon2:before,.licensepack_box .licensepack_block #badge-ribbon2:after {content: '';position: absolute;border-bottom: 35px solid #A7A7AD;border-left: 10px solid transparent;border-right: 10px solid transparent;top: 37px;left: 0px;-webkit-transform: rotate(-140deg);-moz-transform: rotate(-140deg);-ms-transform: rotate(-140deg);-o-transform: rotate(-140deg);}
 .licensepack_box .licensepack_block #badge-ribbon3 {position: absolute;background: #824A02;height: 50px;width: 50px;border-radius: 50px;right: 10px;top: 20px;}
 .licensepack_box .licensepack_block #badge-ribbon3:before,.licensepack_box .licensepack_block #badge-ribbon3:after {content: '';position: absolute;border-bottom: 35px solid #824A02;border-left: 10px solid transparent;border-right: 10px solid transparent;top: 37px;left: 0px;-webkit-transform: rotate(-140deg);-moz-transform: rotate(-140deg);-ms-transform: rotate(-140deg);-o-transform: rotate(-140deg);}
 .licensepack_box .licensepack_block #badge-ribbon1:after,.licensepack_box .licensepack_block #badge-ribbon2:after,.licensepack_box .licensepack_block #badge-ribbon3:after {left: auto;right: 0px;-webkit-transform: rotate(140deg);-moz-transform:    rotate(140deg);-ms-transform:rotate(140deg);-o-transform:rotate(140deg);}
-.licensepack_box .licensepack_block #badge-ribbon1 span,.licensepack_box .licensepack_block #badge-ribbon2 span,.licensepack_box .licensepack_block #badge-ribbon3 span{line-height: 50px;text-align: center;display: block;color: #fff;font-size: 20px;font-weight: bold;vertical-align: middle;}
+.licensepack_box .licensepack_block #badge-ribbon1 span,.licensepack_box .licensepack_block #badge-ribbon2 span,.licensepack_box .licensepack_block #badge-ribbon3 span{line-height: 50px;text-align: center;display: block;color: #fff;font-size: 20px;font-weight: bold;vertical-align: middle;} -->
 .topclient_box .client_section .no-padding ul{float:right}
 .topclient_box .client_section .no-padding ul li:last-child{padding:0;}
 .overall_answer .chart_block,.feedback_completion .chart_block{height:300px;}
@@ -596,34 +597,40 @@ header .user_dropdown li ul.dropdown-menu li.img_name {background: url(dashboard
 						</div>
 						<div class="clearfix"></div>
 						<div class="licensepack_block">
+						<div class="pull-left">
 							<h4>Diamond</h4>
 							<ul class="list-unstyled">
 								<li><h4>Total Sold</h4><span>55</span></li>
 								<li><h4>Earning</h4><span>$6,647</span></li>
 								<!-- <li><h4>License</h4><span>2500</span></li> -->
 							</ul>
+							</div>
 							<!-- <div class="number"><span>1</span></div> -->
-							<div id="badge-ribbon2"><span>1</span></div>
+							<div class="pull-right"><img src="dashboard/medal.png"></div>
 						</div>
 						<div class="licensepack_block">
+						<div class="pull-left">
 							<h4>Silver</h4>
 							<ul class="list-unstyled">
 								<li><h4>Total Sold</h4><span>49</span></li>
 								<li><h4>Earning</h4><span>$3,258</span></li>
 								<!-- <li><h4>License</h4><span>1900</span></li> -->
 							</ul>
+							</div>
 							<!-- <div class="number"><span>2</span></div> -->
-							<div id="badge-ribbon1"><span>2</span></div>
+							<div class="pull-right"><img src="dashboard/medal.png"></div>
 						</div>
 						<div class="licensepack_block">
+						<div class="pull-left">
 							<h4>Gold</h4>
 							<ul class="list-unstyled">
 								<li><h4>Total Sold</h4><span>45</span></li>
 								<li><h4>Earning</h4><span>$4,684</span></li>
 								<!-- <li><h4>License</h4><span>1400</span></li> -->
 							</ul>
+							</div>
 							<!-- <div class="number"><span>3</span></div> -->
-							<div id="badge-ribbon3"><span>3</span></div>
+							<div class="pull-right"><img src="dashboard/medal.png"></div>
 						</div>
 					</div>
 				</div>		
