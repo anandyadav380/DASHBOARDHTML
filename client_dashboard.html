@@ -24,7 +24,7 @@
 .number_box .red_box .pull-left span,.number_box .black_box .pull-left span{color: #575962;}
 .number_box .red_box .pull-right span,.number_box .black_box .pull-right span{font-size: 22px;color:#000;}
 .scroll_topclient,.scroll_topclient1{height: 346px; overflow:auto; width:100%;<!--  padding-right:10px;  -->display:block; position:relative;}
-.scroll_topclient .ps__thumb-y,.scroll_topclient1 .ps__thumb-y{background:rgba(0,0,0,0.45);}
+.scroll_topclient .ps__thumb-y,.scroll_topclient1 .ps__thumb-y,.scroll_topclient1 .ps__thumb-x,.scroll_topclient .ps__thumb-x{background:rgba(0,0,0,0.45);}
 .topclient_box .client_section{border-bottom: 1px dashed #e3e3e3;padding-bottom: 20px;margin-bottom: 10px;float:left;width:100%;}
 .no-padding{padding:0;}
 .topclient_box .client_section ul li{list-style: none;display: inline-block;text-align: right;padding-right: 10px;}
@@ -164,11 +164,11 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 }
 @media (max-width: 512px){
 	.number_box .col-xs-6,.topclient_box .col-xs-8,.topclient_box .col-xs-4{width:100%;}
-
+	#feedback_ratio{width: 280px;}
 	.topclient_box .client_section .no-padding ul {float: left;text-align: left;margin-left: 29%;}
 	.topclient_box .client_section ul li h4{text-align:left;}
 	.admin_tbl {height: auto;}
-
+	.dashboard_box .title_block h4{font-size:17px;}
 	.scroll_notification .col-md-3,.scroll_notification1 .col-xs-3{width:30%;}
 	.scroll_notification .col-md-9,.scroll_notification1 .col-xs-9{width:70%;}
 	.notifications .notification_red .notification_time::after, .notifications .notification_black .notification_time::after{right:5px;}
@@ -582,6 +582,7 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 					<div class="clearfix"></div>
 					<div class="admin_tbl">
 					<div class="table-responsive">
+					<div class="scroll_topclient1">
 					<table _ngcontent-c4="" class="table table-hover table-bordered">
 							<thead _ngcontent-c4="">
 							  <tr _ngcontent-c4="">
@@ -631,6 +632,7 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 								</tr>
 							</tbody>
 						</table>
+						</div>
 						</div>
 					</div>
 					</div>
