@@ -24,7 +24,7 @@
 .number_box .red_box .pull-left span,.number_box .black_box .pull-left span{color: #575962;}
 .number_box .red_box .pull-right span,.number_box .black_box .pull-right span{font-size: 22px;color:#000;}
 .scroll_topclient,.scroll_topclient1{height: 346px; overflow:auto; width:100%;<!--  padding-right:10px;  -->display:block; position:relative;}
-.scroll_topclient .ps__thumb-y,.scroll_topclient1 .ps__thumb-y{background:rgba(0,0,0,0.45);}
+.scroll_topclient .ps__thumb-y,.scroll_topclient1 .ps__thumb-y,.scroll_topclient2 .ps__thumb-y,.scroll_topclient3 .ps__thumb-y,{background:rgba(0,0,0,0.45);}
 .topclient_box .client_section{border-bottom: 1px dashed #e3e3e3;padding-bottom: 20px;margin-bottom: 10px;float:left;width:100%;}
 .no-padding{padding:0;}
 .topclient_box .client_section ul li{list-style: none;display: inline-block;text-align: right;padding-right: 10px;}
@@ -72,12 +72,100 @@ select{background: transparent url(dashboard/arrow-down-b.png) no-repeat scroll 
 header .user_dropdown li ul.dropdown-menu li.img_name {background: url(dashboard/user_bg.jpg) center center no-repeat;}
 .back_button a{margin-top: 20px;display: block;min-width: 65px;}
 #sidebar ul li a{text-transform:capitalize;}
-.scroll_topclient .client_section .media-left img,.scroll_topclient1 .client_section .media-left img{width:60px !important;}
+.scroll_topclient2,.scroll_topclient3{height:345px;}
+.scroll_topclient2 .client_section .media-left img,.scroll_topclient3 .client_section .media-left img{width:60px !important;}
 .media-body, .media-left, .media-right{vertical-align:middle;}
 .back_button.col-md-9{padding:0px;}
 header .user_dropdown li ul.dropdown-menu li a.next_btn{display: inline-block;background: var(--theme-color);border-radius: 4px;color: #fff;font-size: 13px;border: 0;padding: 10px;line-height: 13px;min-width: 100px;opacity: 0.85;transition: all .3s ease-in-out;box-shadow: 0 5px 10px 2px rgba(88,103,221,.19);text-align: center;}
 header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;background: var(--theme-color);}
 .licensepack_sell .white_block .nav > li.disabled > a:focus, .licensepack_sell .white_block .nav > li.disabled > a:hover, .licensepack_sell .white_block .nav-pills > li.disabled.active > a, .licensepack_sell .white_block .nav-pills > li.disabled.active > a:focus, .licensepack_sell .white_block .nav-pills > li.disabled.active > a:hover,.licensepack_sell .white_block .nav > li.disabled > a{background:none;box-shadow:none;color:#b5b5b5;}
+
+@media (width: 1200px){
+	.scroll_topclient, .scroll_topclient1{height:275px;}
+}
+@media (width: 1024px) {
+	.number_box .col-md-3{width:50%;}
+	.licensepack_box .licensepack_block ul li{padding-right:5px;}
+	.licensepack_box .licensepack_block ul li:last-child{padding-right:0px;}
+	.licensepack_block img{width:48px;height:48px;}
+	.title_block h4,.dashboard_box h4{font-size:14px;}
+	.admin_tbl {height: auto;}
+	.scroll_notification, .scroll_notification1{height:400px;}
+	.notifications .notification_time{font-size:12px;}
+	.notifications .notification_red .notification_time::after,.notifications .notification_black .notification_time::after{right:5px;}
+	.notifications .notification_time{padding-right:5px;}
+}
+@media (max-width: 992px) {	
+	.hamburger {display: none;}
+}
+@media (width: 834px){	
+	.notifications .notification_time{padding-right:5px;}
+	.scroll_notification, .scroll_notification1{height:400px;}
+	.back_button a{margin-right:15px;}
+	.white_box h4,.title_block h4,.dashboard_box h4{font-size:14px;}
+	.admin_tbl {height: auto!important;}
+	.notifications .notification_time{font-size:12px;}
+	.notifications .notification_red .notification_time::after,.notifications .notification_black .notification_time::after{right:5px;}
+}
+@media (width: 768px){	
+	.back_button a{margin-right:15px;}
+	.white_box h4,.title_block h4,.dashboard_box h4{font-size:14px;}
+	.admin_tbl {height: auto!important;}
+	.notifications .pull-right{float:left!important;}
+	.notifications .notification_time{font-size:12px;}
+	.notifications .notification_red .notification_time::after,.notifications .notification_black .notification_time::after{right:5px;}
+}
+@media (max-width: 767px) {	
+	.scroll_topclient, .scroll_topclient1{height:auto;}
+	.scroll_notification, .scroll_notification1{height:auto;}
+}
+@media (width: 1080px) {
+	.black_box .white_box,.red_box .white_box{padding: 10px 10px;}
+	.number_box .red_box h4, .number_box .black_box h4{font-size:15px;}
+	.number_box .red_box .pull-right span, .number_box .black_box .pull-right span{font-size:20px;}
+	.white_box .title_block h4,.title_block h4,.dashboard_box h4{font-size:14px;}
+	.licensepack_box .licensepack_block ul li{padding-right:8px;}
+	.scroll_notification, .scroll_notification1 {height: 400px;}
+	.admin_tbl {height: 340px;}
+}
+@media (width: 992px) {
+	.black_box .white_box,.red_box .white_box{padding: 10px 10px;}
+	.number_box .red_box h4, .number_box .black_box h4{font-size:14px;}
+	.number_box .red_box .pull-right span, .number_box .black_box .pull-right span{font-size:18px;}
+	.licensepack_box .licensepack_block ul li{padding-right:5px;}
+	.licensepack_box .licensepack_block ul li:last-child{padding-right:0px;}
+	.licensepack_block img{width:48px;height:48px;}
+	.scroll_topclient, .scroll_topclient1{height:275px;}
+	.scroll_topclient2, .scroll_topclient3 {height: 377px;}
+	.white_box h4,.title_block h4,.dashboard_box h4{font-size:14px;}
+	.scroll_notification, .scroll_notification1 {height: 400px;}	
+	.notifications .notification_red .notification_time::after,.notifications .notification_black .notification_time::after{right:4px;}
+}
+@media (width: 812px){
+	.admin_tbl {height: auto;}
+	.notifications .pull-right{float:left!important;}
+	.notifications .pull-right{float:left!important;}
+	.notifications .notification_time{font-size:12px;}
+	.notifications .notification_time{padding-right:5px;}
+	.notifications .notification_red .notification_time::after,.notifications .notification_black .notification_time::after{right:5px;}
+}
+@media (max-width: 512px){
+	.number_box .col-xs-6,.topclient_box .col-xs-8,.topclient_box .col-xs-4{width:100%;}
+
+	.topclient_box .client_section .no-padding ul {float: left;text-align: left;margin-left: 29%;}
+	.topclient_box .client_section ul li h4{text-align:left;}
+	.admin_tbl {height: auto;}
+
+	.scroll_notification .col-md-3,.scroll_notification1 .col-xs-3{width:30%;}
+	.scroll_notification .col-md-9,.scroll_notification1 .col-xs-9{width:70%;}
+	.notifications .notification_red .notification_time::after, .notifications .notification_black .notification_time::after{right:5px;}
+	.notifications .notification_time {padding-top: 30px;}
+	.notifications .notification_desc {padding-top: 20px;}
+}
+@media (width: 320px){
+	.topclient_box .pull-right {float: left !important;}
+	.title_block .pull-right{float:left!important;}
+}
 </style>
 
 </head>
@@ -86,7 +174,7 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
         <div _ngcontent-c1="" class="container">
           <div _ngcontent-c1="" class="row"> 
             
-            <div _ngcontent-c1="" class="col-md-2 col-sm-2 col-xs-12">
+            <div _ngcontent-c1="" class="col-md-2 col-sm-2 col-xs-6">
               <div _ngcontent-c1="" class="logo"> <a _ngcontent-c1=""  href="#">
                 <!--bindings={
   "ng-reflect-ng-if": "false"
@@ -97,7 +185,7 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
               </a>
                </div>
             </div>
-			<div _ngcontent-c1="" class="back_button col-md-9 col-sm-9 col-xs-5">
+			<div _ngcontent-c1="" class="back_button col-md-9 col-sm-9 col-xs-3">
 			<div class="pull-right">
 				<a class="next_btn" href="http://demo.learnfeedback.com/">Back</a>
 			</div>
@@ -105,7 +193,7 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
              
             
             
-            <div _ngcontent-c1="" class="col-md-1 col-sm-1 col-xs-7">
+            <div _ngcontent-c1="" class="col-md-1 col-sm-1 col-xs-3">
 			
               <!--bindings={
   "ng-reflect-ng-if": "true"
@@ -335,7 +423,7 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
         <h1>Dashboard</h1>
         <div class="row">
 		<div class="number_box">
-			<div class="col-md-3 col-sm-6 col-xs-12">
+			<div class="col-md-3 col-sm-6 col-xs-6">
 			<div class="red_box">
 				<div class="white_box">
 					<div class="pull-left">
@@ -349,7 +437,7 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 				</div>
 			</div>
 			</div>
-			<div class="col-md-3 col-sm-6 col-xs-12">
+			<div class="col-md-3 col-sm-6 col-xs-6">
 			<div class="black_box">
 				<div class="white_box">
 					<div class="pull-left">
@@ -363,7 +451,7 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 				</div>
 			</div>
 			</div>
-			<div class="col-md-3 col-sm-6 col-xs-12">
+			<div class="col-md-3 col-sm-6 col-xs-6">
 			<div class="red_box">
 				<div class="white_box">
 					<div class="pull-left">
@@ -377,7 +465,7 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 				</div>
 			</div>
 			</div>
-			<div class="col-md-3 col-sm-6 col-xs-12">
+			<div class="col-md-3 col-sm-6 col-xs-6">
 			<div class="black_box">
 				<div class="white_box">
 					<div class="pull-left">
@@ -412,9 +500,9 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 						<div class="clearfix"></div>
 						<div class="tab-content">
 							<div id="home" class="tab-pane fade in active">
-								<div class="scroll_topclient">
+								<div class="scroll_topclient2">
 									<div class="client_section">
-											<div class="col-md-9 col-sm-8 no-padding">
+											<div class="col-md-9 col-sm-8 col-xs-8 no-padding">
 												<div class="media">
 													<div class="media-left">
 														<img src="dashboard/logo.png" class="media-object" style="width:100px">
@@ -425,7 +513,7 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 													</div>
 												</div>
 											</div>
-											<div class="col-md-3 col-sm-4 no-padding">
+											<div class="col-md-3 col-sm-4 col-xs-4 no-padding">
 												<ul class="list-unstyled">
 													<!-- <li><h4>2567</h4><span>Licenses</span></li> -->
 													<li><h4>$2765</h4><span></span></li>
@@ -434,7 +522,7 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 									</div>
 									<div class="clearfix"></div>
 									<div class="client_section">
-											<div class="col-md-9 col-sm-8 no-padding">
+											<div class="col-md-9 col-sm-8 col-xs-8 no-padding">
 												<div class="media">
 													<div class="media-left">
 														<img src="dashboard/Google.png" class="media-object" style="width:100px">
@@ -445,7 +533,7 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 													</div>
 												</div>
 											</div>
-											<div class="col-md-3 col-sm-4 no-padding">
+											<div class="col-md-3 col-sm-4 col-xs-4 no-padding">
 												<ul class="list-unstyled">
 													<!-- <li><h4>2456</h4><span>License</span></li> -->
 													<li><h4>$2408</h4><span></span></li>
@@ -454,7 +542,7 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 									</div>
 									<div class="clearfix"></div>
 									<div class="client_section">
-											<div class="col-md-9 col-sm-8 no-padding">
+											<div class="col-md-9 col-sm-8 col-xs-8 no-padding">
 												<div class="media">
 													<div class="media-left">
 														<img src="dashboard/Microsoft.png" class="media-object" style="width:100px">
@@ -465,7 +553,7 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 													</div>
 												</div>
 											</div>
-											<div class="col-md-3 col-sm-4 no-padding">
+											<div class="col-md-3 col-sm-4 col-xs-4 no-padding">
 												<ul class="list-unstyled">
 													<!-- <li><h4>2100</h4><span>License</span></li> -->
 													<li><h4>$2113</h4><span></span></li>
@@ -474,7 +562,7 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 									</div>
 									<div class="clearfix"></div>
 									<div class="client_section">
-											<div class="col-md-9 col-sm-8 no-padding">
+											<div class="col-md-9 col-sm-8 col-xs-8 no-padding">
 												<div class="media">
 													<div class="media-left">
 														<img src="dashboard/Sony.png" class="media-object" style="width:100px">
@@ -485,7 +573,7 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 													</div>
 												</div>
 											</div>
-											<div class="col-md-3 col-sm-4 no-padding">
+											<div class="col-md-3 col-sm-4 col-xs-4 no-padding">
 												<ul class="list-unstyled">
 													<!-- <li><h4>1978</h4><span>License</span></li> -->
 													<li><h4>$1987</h4><span></span></li>
@@ -496,9 +584,9 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 								</div>
 							</div>
 							<div id="menu1" class="tab-pane fade">
-								<div class="scroll_topclient1">
+								<div class="scroll_topclient3">
 									<div class="client_section">
-											<div class="col-md-9 col-sm-8 no-padding">
+											<div class="col-md-9 col-sm-8 col-xs-8 no-padding">
 												<div class="media">
 													<div class="media-left">
 														<img src="dashboard/logo.png" class="media-object" style="width:100px">
@@ -509,7 +597,7 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 													</div>
 												</div>
 											</div>
-											<div class="col-md-3 col-sm-4 no-padding">
+											<div class="col-md-3 col-sm-4 col-xs-4 no-padding">
 												<ul class="list-unstyled">
 													<li><h4>2680</h4><span>Licenses</span></li>
 													<!-- <li><h4>154</h4><span>Dollar</span></li> -->
@@ -518,7 +606,7 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 									</div>
 									<div class="clearfix"></div>
 									<div class="client_section">
-											<div class="col-md-9 col-sm-8 no-padding">
+											<div class="col-md-9 col-sm-8 col-xs-8 no-padding">
 												<div class="media">
 													<div class="media-left">
 														<img src="dashboard/Microsoft.png" class="media-object" style="width:100px">
@@ -529,7 +617,7 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 													</div>
 												</div>
 											</div>
-											<div class="col-md-3 col-sm-4 no-padding">
+											<div class="col-md-3 col-sm-4 col-xs-4 no-padding">
 												<ul class="list-unstyled">
 													<li><h4>2498</h4><span>Licenses</span></li>
 													<!-- <li><h4>146</h4><span>Dollar</span></li> -->
@@ -538,7 +626,7 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 									</div>
 									<div class="clearfix"></div>
 										<div class="client_section">
-											<div class="col-md-9 col-sm-8 no-padding">
+											<div class="col-md-9 col-sm-8 col-xs-8 no-padding">
 												<div class="media">
 													<div class="media-left">
 														<img src="dashboard/Sony.png" class="media-object" style="width:100px">
@@ -549,7 +637,7 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 													</div>
 												</div>
 											</div>
-											<div class="col-md-3 col-sm-4 no-padding">
+											<div class="col-md-3 col-sm-4 col-xs-4 no-padding">
 												<ul class="list-unstyled">
 													<li><h4>2200</h4><span>Licenses</span></li>
 													<!-- <li><h4>105</h4><span>Dollar</span></li> -->
@@ -558,7 +646,7 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 										</div>
 										<div class="clearfix"></div>
 										<div class="client_section">
-											<div class="col-md-9 col-sm-8 no-padding">
+											<div class="col-md-9 col-sm-8 col-xs-8 no-padding">
 												<div class="media">
 													<div class="media-left">
 														<img src="dashboard/Google.png" class="media-object" style="width:100px">
@@ -569,7 +657,7 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 													</div>
 												</div>
 											</div>
-											<div class="col-md-3 col-sm-4 no-padding">
+											<div class="col-md-3 col-sm-4 col-xs-4 no-padding">
 												<ul class="list-unstyled">
 													<li><h4>2045</h4><span>Licenses</span></li>
 													<!-- <li><h4>98</h4><span>Dollar</span></li> -->
@@ -640,7 +728,7 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 			</div>
 			</div>
 			<div class="clearfix"></div>
-			<div class="col-md-6 col-sm-6">
+			<div class="col-md-6 col-sm-6 col-xs-12">
 			<div class="dashboard_box admin_dashbox">
 			  	<div class="red_block"><h4>Invited Clients (Last 6 Months)</h4>
 				<div id="clientinvitation_chart" class="chart_block"></div>
@@ -765,7 +853,7 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 				</div>
 			</div>
 			</div>
-			<div class="col-md-6 col-sm-6">
+			<div class="col-md-6 col-sm-6 col-xs-12">
 			<div class="dashboard_box admin_dashbox">
 			  	<div class="red_block"><h4>Sold License Packs (Last 6 Months)</h4>
 				<div id="licensepack_chart" class="chart_block"></div>
@@ -784,6 +872,7 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 					<div class="clearfix"></div>
 					<div class="admin_tbl">
 					<div class="table-responsive">
+					<div class="scroll_topclient">
 					<table _ngcontent-c4="" class="table table-hover table-bordered">
 							<thead _ngcontent-c4="">
 							  <tr _ngcontent-c4="">
@@ -842,13 +931,14 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 							</tbody>
 						</table>
 						</div>
+						</div>
 					</div>
 					</div>
 				</div>
 			</div>
 			</div>
 			<div class="clearfix"></div>
-			<div class="col-md-6 col-sm-6">
+			<div class="col-md-6 col-sm-6 col-xs-12">
 			<div class="dashboard_box admin_dashbox">
 			<div class="licensepack_sell">
 			  	<div class="red_block">
@@ -915,12 +1005,12 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 					<div class="scroll_notification">
 						<div class="notification_red">
 							<div class="row">
-								<div class="col-md-3 col-sm-3">
+								<div class="col-md-3 col-sm-3 col-xs-3">
 									<div class="notification_time">
 										<span>07:21 PM</span>
 									</div>
 								</div>
-								<div class="col-md-9 col-sm-9">
+								<div class="col-md-9 col-sm-9 col-xs-9">
 									<div class="notification_desc">
 										<p>Registration Completed</p>
 										<span>By Cisco Technology</span>
@@ -930,12 +1020,12 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 						</div>
 						<div class="notification_black">
 							<div class="row">
-								<div class="col-md-3 col-sm-3">
+								<div class="col-md-3 col-sm-3 col-xs-3">
 									<div class="notification_time">
 										<span>06:00 PM</span>
 									</div>
 								</div>
-								<div class="col-md-9 col-sm-9">
+								<div class="col-md-9 col-sm-9 col-xs-9">
 									<div class="notification_desc">
 										<p>Add On - 10 - License Pack Purchased</p>
 										<span>By ACN Inc.</span>
@@ -945,12 +1035,12 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 						</div>
 						<div class="notification_red">
 							<div class="row">
-								<div class="col-md-3 col-sm-3">
+								<div class="col-md-3 col-sm-3 col-xs-3">
 									<div class="notification_time">
 										<span>04:54 PM</span>
 									</div>
 								</div>
-								<div class="col-md-9 col-sm-9">
+								<div class="col-md-9 col-sm-9 col-xs-9">
 									<div class="notification_desc">
 										<p>Platinum - License Pack Purchased</p>
 										<span>By Google Inc.</span>
@@ -960,12 +1050,12 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 						</div>
 						<div class="notification_black">
 							<div class="row">
-								<div class="col-md-3 col-sm-3">
+								<div class="col-md-3 col-sm-3 col-xs-3">
 									<div class="notification_time">
 										<span>03:07 PM</span>
 									</div>
 								</div>
-								<div class="col-md-9 col-sm-9">
+								<div class="col-md-9 col-sm-9 col-xs-9">
 									<div class="notification_desc">
 										<p>Diamond - License Pack Purchased</p>
 										<span>By OpenEyes Technologies</span>
@@ -975,12 +1065,12 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 						</div>
 						<div class="notification_red">
 							<div class="row">
-								<div class="col-md-3 col-sm-3">
+								<div class="col-md-3 col-sm-3 col-xs-3">
 									<div class="notification_time">
 										<span>02:58 PM</span>
 									</div>
 								</div>
-								<div class="col-md-9 col-sm-9">
+								<div class="col-md-9 col-sm-9 col-xs-9">
 									<div class="notification_desc">
 										<p>Add On - 10 - License Pack Purchased</p>
 										<span>By Anthem Inc.</span>
@@ -990,12 +1080,12 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 						</div>
 						<div class="notification_black">
 							<div class="row">
-								<div class="col-md-3 col-sm-3">
+								<div class="col-md-3 col-sm-3 col-xs-3">
 									<div class="notification_time">
 										<span>12:49 PM</span>
 									</div>
 								</div>
-								<div class="col-md-9 col-sm-9">
+								<div class="col-md-9 col-sm-9 col-xs-9">
 									<div class="notification_desc">
 										<p>Gold - License Pack Purchased</p>
 										<span>By Sony Corporation</span>
@@ -1009,12 +1099,12 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 					<div class="scroll_notification1">
 						<div class="notification_red">
 							<div class="row">
-								<div class="col-md-3 col-sm-3">
+								<div class="col-md-3 col-sm-3 col-xs-3">
 									<div class="notification_time">
 										<span>Sep 08,2018</span>
 									</div>
 								</div>
-								<div class="col-md-9 col-sm-9">
+								<div class="col-md-9 col-sm-9 col-xs-9">
 									<div class="notification_desc">
 										<p>Registration Completed</p>
 										<span>By Anthem Inc.</span>
@@ -1024,12 +1114,12 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 						</div>
 						<div class="notification_black">
 							<div class="row">
-								<div class="col-md-3 col-sm-3">
+								<div class="col-md-3 col-sm-3 col-xs-3">
 									<div class="notification_time">
 										<span>Sep 08,2018</span>
 									</div>
 								</div>
-								<div class="col-md-9 col-sm-9">
+								<div class="col-md-9 col-sm-9 col-xs-9">
 									<div class="notification_desc">
 										<p>Add On - 10 - License Pack Purchased</p>
 										<span>By ACN Inc.</span>
@@ -1039,12 +1129,12 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 						</div>
 						<div class="notification_red">
 							<div class="row">
-								<div class="col-md-3 col-sm-3">
+								<div class="col-md-3 col-sm-3 col-xs-3">
 									<div class="notification_time">
 										<span>Sep 07,2018</span>
 									</div>
 								</div>
-								<div class="col-md-9 col-sm-9">
+								<div class="col-md-9 col-sm-9 col-xs-9">
 									<div class="notification_desc">
 										<p>Silver - License Pack Purchased</p>
 										<span>By Google Inc.</span>
@@ -1054,12 +1144,12 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 						</div>
 						<div class="notification_black">
 							<div class="row">
-								<div class="col-md-3 col-sm-3">
+								<div class="col-md-3 col-sm-3 col-xs-3">
 									<div class="notification_time">
 										<span>Sep 04,2018</span>
 									</div>
 								</div>
-								<div class="col-md-9 col-sm-9">
+								<div class="col-md-9 col-sm-9 col-xs-9">
 									<div class="notification_desc">
 										<p>Platinum - License Pack Purchased</p>
 										<span>By OpenEyes Technologies</span>
@@ -1069,12 +1159,12 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 						</div>
 						<div class="notification_red">
 							<div class="row">
-								<div class="col-md-3 col-sm-3">
+								<div class="col-md-3 col-sm-3 col-xs-3">
 									<div class="notification_time">
 										<span>Aug 30,2018</span>
 									</div>
 								</div>
-								<div class="col-md-9 col-sm-9">
+								<div class="col-md-9 col-sm-9 col-xs-9">
 									<div class="notification_desc">
 										<p>Registration Completed</p>
 										<span>By ACN Inc.</span>
@@ -1084,12 +1174,12 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 						</div>
 						<div class="notification_black">
 							<div class="row">
-								<div class="col-md-3 col-sm-3">
+								<div class="col-md-3 col-sm-3 col-xs-3">
 									<div class="notification_time">
 										<span>Aug 18,2018</span>
 									</div>
 								</div>
-								<div class="col-md-9 col-sm-9">
+								<div class="col-md-9 col-sm-9 col-xs-9">
 									<div class="notification_desc">
 										<p>Platinum - License Pack Purchased</p>
 										<span>By Apple Inc.</span>
@@ -1099,12 +1189,12 @@ header .user_dropdown li ul.dropdown-menu li a.next_btn:hover {opacity:1;backgro
 						</div>
 						<div class="notification_red">
 							<div class="row">
-								<div class="col-md-3 col-sm-3">
+								<div class="col-md-3 col-sm-3 col-xs-3">
 									<div class="notification_time">
 										<span>Aug 15,2018</span>
 									</div>
 								</div>
-								<div class="col-md-9 col-sm-9">
+								<div class="col-md-9 col-sm-9 col-xs-9">
 									<div class="notification_desc">
 										<p>Registration Completed</p>
 										<span>By Apple Inc.</span>
@@ -1760,7 +1850,8 @@ var chart = AmCharts.makeChart( "feedback_ratio", {
 new PerfectScrollbar('.ul_block');
 new PerfectScrollbar('.scroll_notification');
 new PerfectScrollbar('.scroll_notification1');
-
+new PerfectScrollbar('.scroll_topclient2');
+new PerfectScrollbar('.scroll_topclient3');
 // END PERFECT SCROLLBAR
 
 </script>
