@@ -13,18 +13,18 @@
 
 
 <?php
-/*
+///*
 $servername = "localhost";
 $username = "devbyo5_LFBDEMO";
 $password = "o7N[;j]U*6y5";
 $dbname = "devbyo5_LFBDEMO";
-*/
-///*
+//*/
+/*
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "lfb_demo";
-//*/
+*/
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
